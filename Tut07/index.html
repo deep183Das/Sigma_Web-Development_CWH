@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms in HTML</title>
+</head>
+<body>
+    <h1>Form to apply for Sigma Web Development course - TA</h1>
+    <form action="/submit.php" method="post">
+        <div>
+            <label for="UserName">Enter UserName</label>
+            <input type="text" id="UserName" name="username" placeholder="Enter your username"><br>
+
+            <input type="password" name="password" id="password" placeholder="Enter your password"><br>
+
+            <input type="text" required>
+            <input type="text" autofocus>
+            <input type="text" pattern="(a-zA-Z0-9)"> <!-- specific regular expressions-->
+        </div>
+
+        <div>
+            <input type="radio" name="gender" id="male" value="male">
+            <label for="male">Male</label>
+            <input type="radio" name="gender" id="female" value="female">
+            <label for="female">Female</label>
+            <!-- for the same name, only one item will be selected; if we don't write the id names in label tag correctly, then
+            we can't select that option just by selecting on the word, we then have to click on the circular part only. -->
+        </div>
+
+        <div>
+            <input type="checkbox" id="subscribe" name="subscribe" value="yes">
+            <label for="subscribe">Subscribe to newsletter</label>
+        </div>
+
+        <div>
+            <label for="comments">Enter your comment</label>
+            <br>
+            <textarea name="comment" id="comments" cols="30" rows="10">Enter your comment here...</textarea>
+        </div>
+
+        <div>
+            <select name="fruits" id="fruits">
+                <option value="apple">Apple</option>
+                <option value="banana">Banana</option>
+                <option value="cherry">Cherry</option>
+            </select>
+        </div>
+    </form>
+</body>
+</html>
+
+<!-- 
+    "get" & "post" requests in form action's method 
+    ->  get request is simple requests, when we just want the server to hit by a request, even we don't send our passwords using this
+    ->  post request is usually used when we have to give a large numer data
+ -->
+
+<!-- 
+    "input" tags are used inside forms and "lable" tags give label for them
+    "id" is an unique identifier for an element using which we can give labels
+ -->
+
+<!-- Attributes of "form" tag will be more clarified while discussing how the data is parsed using JS -->
+
+<!-- "name" is the key, and the server will get data(values) according to names (will be discussed during "server side processing") -->
+<!-- "placeholder" is what that will be filled inside the box -->
+<!-- "required" attribute is when the data is needed otherwise the form won't be submitted -->
+<!-- "autofocus" attribute automatically focuses the cursor on the particular input when the page loads -->
+<!-- "pattern" attribute specifies a regular expression that the input must match to be valid -->

@@ -1,0 +1,29 @@
+
+1. SEO (search engine optimization) 
+    SEO means "Search Engine Optimization" and is the process used to optimize a 'website's technical configuration', 
+    content relevance and link popularity so its pages can become easily findable, more relevant and popular towards 
+    user search queries, and as a consequence, search engines rank the web pages better.
+
+2. Core Web Vitals in HTML
+    This is also used to rank web pages. Having a good content will make the seo rank the page better. But if two 
+    page have kind of similar content, then "core web vitals" will be used to choose the better page among them.
+
+    for reference, watch the "core-with-vitals.png" file.
+    -> CLS (cumulative layout shift) --> while our page is loading, how much it is shifting.
+    -> FID (first input delay) --> the time between user's first interaction and the browser processing the event handlers in 
+    response to the interaction.
+    -> LCP (largest contentful paint) --> time taken by the largest picture / text block to load relative to the website when 
+    it started to load.
+    
+    -> FCP (first contextual paint) 
+
+3. "lighthouse feature inside chrome"
+    You can generate the web-page's report using lighthouse, 
+    "right-click -> inspect -> lighthouse -> generate report"
+
+    For better user experience, it gives several suggestions to work on to optimize the web page
+
+    to know how your webpage will look like in different systems, 
+    "right-click -> inspect -> "toggle-device-toolbar(ctrl+shift+m)"[just left to "Elements" option]"
+
+4. Meta tags and meta descriptions

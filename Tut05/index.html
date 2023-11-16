@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Images - Table</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Image (if the specific image is not existing, then the words under "alt" attribute will be shown)-->
+    <img src="image01.png" alt="Train Image" width="300">
+    <br> <!-- gives line breaker -->
+    <img src="image02.png" alt="Train Image">
+
+
+    <!-- Table -->
+    <!-- to explain this, a style-sheet is used -->
+    <table>
+        <caption>Employee Details</caption>
+        <tr>
+            <th>Name</th>
+            <th>Designation</th>
+            <th>Fav Language</th>
+        </tr>
+        <caption>Caption will lie on the top of the headings</caption>
+        <tr>
+            <td>Deep</td>
+            <td>Programmer</td>
+            <td>C++</td>
+        </tr>
+        <tr>
+            <td colspan="2">Harry</td>
+            <td rowspan="2">JavaScript</td>
+        </tr>
+        <tr>
+            <td>Sam</td>
+            <td>Coder</td>
+        </tr>
+    </table>
+    <br>
+    <!-- thead, tbody, tfoot are used to group them, which we can further target & modify using CSS -->
+    <table>
+        <caption>Student Details</caption>
+
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Sex</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Deep</td>
+                <td>19</td>
+                <td>Male</td>
+            </tr>
+            <tr>
+                <td>Chandrayee</td>
+                <td>19</td>
+                <td>Female</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="2">Data-1</td>
+                <td>Data-2</td>
+            </tr>
+        </tfoot>
+    </table>
+
+
+    <!-- List -->
+    <ul type="square">
+        <li>Deep</li>
+        <li>Rohan</li>
+        <li>Harry</li>
+    </ul>
+    <ol type="I">
+        <li>Deep</li>
+        <li>Rohan</li>
+        <li>Harry</li>
+    </ol>
+    <!-- Definition List -->
+    <h2>Frontend Components</h2>
+    <dl>
+        <dt>HTML</dt>
+        <dd>HyperText Markup Language : The standard language for creating web pages.</dd>
+
+        <dt>CSS</dt>
+        <dd>Cascading Style Sheets : A stylesheet language used for describing the looks and formatting of a document written in HTML.</dd>
+
+        <dt>JavaScript</dt>
+        <dd>A programming language commonly used in web development to add interactive features.</dd>
+    </dl>
+</body>
+
+</html>
+
+<!-- "windows + shift + s" -> open the "snipping tool" of windows  -->
+
+<!-- Attrubutes of "img" tag -> src, alt, width(horizontal), height(vertical) [they are in pixels]
+    
+    If one of "width"/"height" is not given, then that will be automatically managed. 
+        
+    Though we can manage the height and width using CSS, but still we should use one of them in the html file, such that
+    while loading our page, the iamge does't pop up instantly. 
+-->
+
+<!-- Table 
+    rowspan -> how many rows will that data occupy (by default 1) 
+    colspan -> how many columns will that data occupy (by default 1) 
+
+    give captions, using "caption" tag
+-->
+
+<!-- 3 types of lists 
+    Ordered List
+    Unordered List
+    Definition List    
+-->
