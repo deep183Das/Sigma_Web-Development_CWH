@@ -1,0 +1,6 @@
+body{
+    background-color: red;  /* it will make the background red */
+    color: white;           /* it will make the words white */
+}
+
+/* it needs to be linked with the "html file" to get the effect of it */ 

@@ -1,0 +1,2 @@
+1. GIT configuration
+2. Link the "style-sheet" & "script-file" with the "html" file 

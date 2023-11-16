@@ -1,0 +1,25 @@
+Introduction to Web Development
+ 
+~ Website works with :
+client 
+browser     
+server 
+
+Client asks for a specific page(e.g. YouTube) from a browser (e.g. Google), it will then asks the youtube page from its server and 
+server is maintaining its code and it's on the browser that how the site will be presented to us. The response code is 200 usually. 
+Either the webpage is available or not or some server error (some kind of server response we will get, that will be parsed through the browser).
+
+You can see the sourse code of a page by "right click" and see "view page source" or for any further request view "inspect"
+404 -> the error response
+200 -> the ok response
+
+~ Now what is "Backend" ?
+    The Backend is the server side of the Website.
+    It stores and arranges data, and also makes sure everything on the client side works fine.
+    It is a part of the website that you cannot see and interact with.
+    It is the portion of the software that does not come in direct conatct with the user.
+
+~ Frontend uses 
+    HTML : structure
+    CSS  : style sheet
+    JS   : makes the webpage dynamic (client side scripting)
