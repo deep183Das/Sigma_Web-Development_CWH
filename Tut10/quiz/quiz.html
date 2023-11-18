@@ -1,0 +1,55 @@
+<!-- Quick Quiz
+    Create a website which shows videos of different categories and audios of different categories.
+    You can use YouTube videos in an iframe using YouTube's embedding feature.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video-Audio Files</title>
+</head>
+<body>
+    <!-- Apparently "/" marked file formats are not supported in HTML5 -->
+    <h2>Videos of Different Categories</h2>
+    <div>
+        <ul>
+            <li>.mp4 file</li>
+            <video src="video01.mp4" controls muted width="300"></video>
+            <li>.avi file</li>
+            <video src="video02.avi" controls muted width="300"></video>    /
+            <li>.mkv file</li>
+            <video src="video03.mkv" controls muted width="300"></video>
+            <li>.wmv file</li>
+            <video src="video04.wmv" controls muted width="300"></video>    /
+            <li>.flv file</li>
+            <video src="video05.flv" controls muted width="300"></video>    /
+            <li>.webm file</li>
+            <video src="video06.webm" controls muted width="300"></video>
+        </ul>
+    </div>
+    <h2>Audio files of Different Categories</h2>
+    <div>
+        <ul>
+            <li>.mp3 file</li>
+            <audio src="audio01.mp3" controls muted preload="metadata"></audio>
+            <li>.m4a file</li>
+            <audio src="audio02.m4a" controls muted preload="metadata"></audio>
+            <li>.wv file</li>
+            <audio src="audio03.wv" controls muted preload="metadata"></audio>      /
+            <li>.aac file</li>
+            <audio src="audio04.aac" controls muted preload="metadata"></audio>
+            <li>.wav file</li>
+            <audio src="audio05.wav" controls muted preload="metadata"></audio>
+            <li>.ape file</li>
+            <audio src="audio06.ape" controls muted preload="metadata"></audio>     /
+        </ul>
+    </div>
+</body>
+</html>
+
+<!-- Some specific audio and video files are not supported in HTML under their respective audio and video tags -->
+<!-- So convert them to more famous and standard file format before using.
+    e.g. for audio files, use "mp3", "ogg", "wav" formats
+-->

@@ -1,0 +1,12 @@
+
+id (an unique identifier)
+    An ID is an "attribute", a unique identifier assigned to only one HTML element within a page.
+    It is often used for unique styling and JavaScript manipulations.
+
+    It is also used for generating links to the specific using # after the page's link, then the page will will be 
+    opened with the part which has that specific id.
+    
+class
+    The class "attribute" lets you give the same name to multipe HTML elements. That way, you can easily change
+    their look or behaviour all at once. Classes are not unique and can be assigned to multiple elements. They 
+    are genrally used for applying the same styles or behaviour to a group of elements.

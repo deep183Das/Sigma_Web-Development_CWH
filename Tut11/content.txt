@@ -1,0 +1,15 @@
+
+Semantic Tags in HTML
+    Benefits : Using HTML's semantic tags can greatly benefit both your website's SEO 
+               ans maintainability of your code. They offer a way to structure your HTML code
+               in a meaningful manner, making your website more accessible and easier to understand.
+
+    header
+    nav
+    article
+    section
+    aside
+    footer
+    figure & figcaption
+    main
+    time

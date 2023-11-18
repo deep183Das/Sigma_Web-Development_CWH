@@ -1,0 +1,16 @@
+/* 
+    classes --> dot(.)
+    id      --> hash(#)
+*/
+
+.red{
+    color: red;
+}
+
+.bg-yellow{
+    background-color: yellow;
+}
+
+#seconddiv{
+    background-color: rgb(54, 183, 54);
+}

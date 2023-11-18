@@ -1,0 +1,2 @@
+Q. My browser may not support each and every type of file. Then how to resolve that issue while creating a generic web page for everyone.
+    -> One solution is to convert those file formats into more popular and standard file formats before using in your webpage.

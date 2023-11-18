@@ -1,0 +1,13 @@
+
+Audio 
+
+Video 
+
+Media elements in HTML
+{
+    SVG file 
+
+    iframe 
+    (we can also generate iframe code of a youtube video by "share -> embed", 
+    can also specify from which point we want to start the video)
+}

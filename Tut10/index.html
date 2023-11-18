@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video-Audio-Media in HTML</title>
+</head>
+<body>
+    <!-- video -->
+    <div>
+        <video src="video01.mp4" controls width="350" muted poster="image02.jpg"></video>
+    </div>
+    <!-- audio -->
+    <div>
+        <audio src="audio01.mp3" controls muted preload="none"></audio>
+    </div>
+
+    <!-- media : "svg" -->
+    <div>
+        <svg height="100" width="100">
+            <circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="red"/>
+        </svg>
+    <!-- or I can save some svg content separately, and can use that here using "img" tag 
+        but then we need to add a "namespace declaration" in the file itself.
+
+        We should add the "one namespace identifier" in the src tag in img.src file
+        xmlns="http://www.w3.org/2000/svg" add this to the src tag as attribute in the img.svg file.
+    -->
+        <img src="image03.svg" alt="SVG image">
+    </div>
+    <!-- media : "iframes" (by this we can embed another website with ours) -->
+    <div>
+        <iframe src="https://www.codewithharry.com/" width="400" height="300" frameborder="0"></iframe>
+    </div>
+    <div>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/XZwBNDGuWGU?si=pbS3JSSg72rnnaYi&amp;start=792" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+</body>
+</html>
+
+<!-- Links can come from any 3rd party server also -->
+<!-- "video", "audio", "svg" are all inline elements -->
+<!-- 
+videos :
+    src    -> specifies the path to the video file
+    controls -> which controls will be added to your video, that is decided by the browser itself
+    autoplay
+    loop
+    muted
+    poster -> specifies an image to be displayed before the video starts playing
+    height and width
+ -->
+
+<!-- 
+audio :
+    src
+    controls -> adds audio cotrols like play, pause and volume
+    autoplay
+    loop
+    muted
+    preload -> specifies if and how the audio should be loaded when the page loads
+        The "preload" attribute can have the following values:
+        -> none 
+            This is the default value. It indicates that the browser should not preload the audio file at all. 
+            The audio file will only start downloading when the user initiates playback.
+        -> metadata
+            This value tells the browser to preload only the metadata of the audio file, such as its duration and basic 
+            information about the audio. This can be useful if you want to display the audio duration to the user without 
+            fully loading the audio data.
+        -> auto
+            This value instructs the browser to preload the entire audio file as much as possible without delaying the 
+            loading of other important page content. The browser will try to load the audio file in the background so that 
+            it's ready to play when the user decides to start it.
+    (if you want the browser to fetch(go and get) the data beforehand, then use "preload" attribute otherwise not)
+ -->
+
+<!-- 
+media :
+    SVG is a format by which we can create images of high graphics (vector images)
+
+    (SVG)Scalable Vector Graphics is an XML-based vector image format for defining two-dimensional graphics, 
+    having support for interactivity and animation. The SVG specification is an open standard, developed 
+    by the World Wide Web Consortium since 1999.
+ -->
