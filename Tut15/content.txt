@@ -1,0 +1,8 @@
+
+Inline, Internal and External CSS _ These are the three ways to add CSS in the HTML file.
+
+Inline CSS    ->  This is used in an HTML page using "style" attributes of several HTML elements.
+
+Internal CSS  ->  It means to add a "style" tag and place the HTML page's style within it.
+
+External CSS  ->  It means to create a ".css" file and place all your styles inside that ".css" file.

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More on HTML</title>
+</head>
+<body>
+    <h2>HTML Entities</h2>
+
+    This is the code for para : &lt;p&gt;&lt;/p&gt; <br>
+    For showing tags, we have to use "HTML entities".
+    
+    <!-- everything is written as it is, all spaces are considered -->
+    <pre>
+        <p>This is paragraph.</p>
+
+
+    This is after few more lines        and few more.
+    </pre>
+
+    <!-- copyright symbol -->
+    Copyright symbol &rArr; &copy;
+
+    <!-- creating a non-breaking space -->
+    <p>This is an example&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text.</p>
+
+    <!-- use of quotation tag : for letting SEO know that you are going to write a quotation here. -->
+    <blockquote cite="source-url">
+        Quotation text here !
+    </blockquote>
+
+    <!-- another way of giving citation -->
+    <q cite="source-url">Quotation text here !</q>
+    <!-- We will use CSS for styling them -->
+
+    <!-- Some obsolette tags in HTML 
+        "font", 
+        "u" tag for giving underlines
+        "centre" tag   _   replaced by css styles 
+    -->
+
+    <!-- code tag -->
+    <div>
+        <!-- for short code snippets, use inline -->
+        <code>#include&lt;stdio.h&gt;</code>
+
+        <!-- for multiline code snippets, use combination of "pre" & "code" tag -->
+        <h3>C++ code for writing "hello world" :</h3>
+        <pre>
+            <code>
+#include&lt;stdio.h&gt;
+using namespace std;
+int main()
+&#123;
+    cout &lt;&lt; "Hello! World.";
+&#125;
+            </code>
+        </pre>
+    </div>
+
+    <div>
+        <h3>This is html boilerplate code :</h3>
+        <pre><code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    
+&lt;/body&gt;
+&lt;/html&gt;
+        </code></pre>
+    </div>
+</body>
+</html>
+
+<!-- "shift + tab" -> it reduces one indentation in each line selected -->
+
+<!-- 
+    <canvas> element serves as a container for graphics, which can be rendered via scripting.
+    Essentially, it offers a drawing area for visual content.
+ -->

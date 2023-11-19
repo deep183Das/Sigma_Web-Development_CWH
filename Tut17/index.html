@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors</title>
+
+    <style>
+    /* Element Selector */
+        div {
+            background-color: aqua;
+        }
+
+    /* Class Selector */
+        .red {
+            color: magenta;
+        }
+
+    /* ID Selector */
+        #green {
+            color: blue;
+        }
+
+    /* Child Selector */
+        div > p {
+            color: white;
+            background-color: brown;
+        }
+
+    /* Decendant Selector */
+        /* Now if I want to target any "p" inside "div" either directly or indirectly (decendant) */
+        div p {
+            background-color: brown;
+        }
+
+    /* Universal Selector */
+        * {
+            margin: 1%;
+            padding: 1%;
+        }
+
+    /* Pseudo Selectors */
+        a:visited {
+            color: yellow;
+            /* It means that if this link inside anchor tag is visited then its color will become yellow */
+        }
+        a:link {
+            color: green;
+            /* i.e. If not visited then its color will be green */
+        }
+        a:active {
+            background-color: red;
+        }
+        a:hover {
+            background-color: pink;
+        }
+    
+    /* Another kind of pseudo-selector is "first-child" pseudo selector */
+        p:first-child {
+            background-color: blue;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="red">
+        I am a div
+        <p>I am a paragraph inside first div</p>
+        <article>
+            <p>Hello I am the first &lt;p&gt; inside &lt;article&gt;.</p>
+            <p>I am also a paragraph but not directly inside div. I am a &lt;p&gt; inside &lt;article&gt; which is inside &lt;div&gt;. So "div &gt; p" "child selector" will not work on me.</p>
+        </article>
+    </div>
+
+    <div id="green">
+        I am also a div
+    </div>
+
+    <div>
+        <a href="https://www.google.com" target="_blank">Go to Google</a>
+        <a href="https://www.quora.com" target="_blank">Go to Quora</a>
+    </div>
+
+    <div class="one">
+        <p>I am first</p>
+        <p>I am second</p>
+    </div>
+</body>
+</html>
+
+<!-- div.selector -> VScode will show it as div having a class="slector" -->
+<!-- div#selector -> VScode will show it as div having an id="selector" -->
