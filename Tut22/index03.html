@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Sizing Units (min-height, max-height, %)</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            font-size: 12px;
+        }
+
+        .box {
+            box-sizing: border-box;
+            border: 2px solid black;
+            width: 80vw;
+            height: 10vh;
+            margin: auto;
+            background-color: aqua;
+        }
+
+        .container {
+            box-sizing: border-box;
+            border: 2px solid black;
+            width: 80vw;
+            margin: 23px auto;
+            background-color: aquamarine;
+            /* height: 80vh; */
+        /* 
+            If we remove this height code above, then
+            the ".mycont" container will go up and if we
+            want this box to maintain a height, do the following 
+        */
+            min-height: 80vh;
+        /* 
+            so even if there is no content in this box,
+            it will still maintain a minimum height of 80vh
+            but there is no maximum limit for "max-height"
+        */
+        }
+
+        .mycont {
+            box-sizing: border-box;
+            border: 2px solid black;
+            margin: 23px auto;
+            color: black;
+            font-size: 22px;
+            width: 80vw;
+        }
+
+        .container > div {
+            font-size: 2rem;
+            border: 2px solid red;
+            width: 50%;
+            /* 
+                50% of its parent's width (i.e. 50% of what is set in ".container" class 
+                which is to set the div's width which is the parent)
+            */
+        }
+        .container > div > div {
+            font-size: 2rem;
+            border: 2px solid blue;
+            width: 50%;
+            /* 
+                50% of its parent's width (i.e. 50% of what is set in "div" element)
+            */
+        }
+        .container > div > div > div {
+            font-size: 2rem;
+            border: 2px solid yellow;
+            width: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        This is a box
+    </div>
+    <div class="container">
+        <div>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi id, ullam corporis, rerum sunt ad veritatis accusantium neque maiores dolores debitis repellat ipsam. Molestiae, tempora facilis! Maxime consequuntur ad doloremque nihil. Harum temporibus et adipisci eius rerum molestiae quia mollitia voluptates quidem ullam laudantium nesciunt exercitationem totam hic assumenda molestias expedita explicabo, eligendi a doloribus similique?
+
+            <div>
+                I am another div inside a div which is also inside a div having class "container".
+                <div>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores odio, est eum optio debitis aperiam eaque inventore rerum voluptate, officia consequatur unde voluptatum natus vero aliquid officiis possimus voluptas perferendis dolorem expedita labore perspiciatis?
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="mycont">
+        I am another container
+    </div>
+</body>
+</html>
+
+<!-- 
+    If we want a box (block level element) to maintain a 
+    height or width and if more content is added then also it will adjust 
+    for more height / width, use "max-height" and "min-height"
+ -->
+
+<!-- 
+    Use of % unit
+    if we use 50% width in a box, that implies 50% of the parent's width
+    
+    % unit can not be used everywhere
+ -->

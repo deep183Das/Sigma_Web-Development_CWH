@@ -1,0 +1,44 @@
+<!-- 
+    Exercise on CSS :
+        ~> 1st paragraph of each div, sould have background-color yellow and color red.
+        ~> Other paragraphs will have background-color blue and text color white.  
+
+    The HTML is written below for your reference.
+    Do not change the HTML. Only the style sheet that you have to deal with to achieve these properties.
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Exercise</title>
+<!-- My style sheet's code here -->
+    <style>
+        /* specificity = 2 */
+        div p {
+            background-color: blue;
+            color: white;
+        }
+
+        /* specificity = 11 */
+        p:first-child {
+            background-color: yellow;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde asperiores doloremque recusandae possimus laborum earum nisi rerum ipsa deserunt totam. Quae sed distinctio consequatur fugit omnis nihil facilis! Molestias eveniet dolorum ipsa dolore, accusamus perferendis!</p>
+        <p>I am another para</p>
+        <p>I am also another para</p>
+    </div>
+
+    <div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde asperiores doloremque recusandae possimus laborum earum nisi rerum ipsa deserunt totam. Quae sed distinctio consequatur fugit omnis nihil facilis! Molestias eveniet dolorum ipsa dolore, accusamus perferendis!</p>
+        <p>I am another para</p>
+        <p>I am also another para</p>
+    </div>
+</body>
+</html>

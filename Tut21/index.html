@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>CSS Specificity</title>
+
+    <style>
+        /* specificity value = 10 */
+        .yellow {
+            color: yellow;
+        }
+
+        /* specificity value = 10 */
+        .cpurple {
+            color: purple;
+        }
+
+        /* specificity value = 10 */
+        .cred {
+            color: red;
+        }
+
+        /* specificity value = 1 */
+        h1 {
+            color: aqua;
+        }   
+
+    /* attribute selector */
+        [data-x=abc]{   
+            background-color: yellow !important; 
+        }
+        /* specificity value = 10(without "!important") */
+        /* specificity value = 10000(with "!important") */
+    </style>
+
+</head>
+<body>
+    <div>
+        <h1 style="background-color: orange;" class="yellow cred cpurple" data-x="abc">CSS Specificity</h1>
+        <!-- specificity of inline style = 1000 < 10000 -->
+    </div>
+</body>
+</html>
+
+<!-- 
+    Say, an element is styled using CSS in two ways, say both are "background-color:" then 
+    which one will be applied is determined by "CSS Specificity" concept.
+ -->
+
+<!-- 
+    "Order of appearances and position" : for same type of selectors, 
+    the order in which they appeared in the style sheet will be considered.
+
+    e.g. among all the class selectors, as "cred" is at the last, so the color will appear in red.
+ -->
+
+<!-- 
+    When there is different types of selectors, then the conflict is resolved by "specificity".
+    The order of "specificity" is :
+        inline style > ID selector > class or pseudoClass or attribute selector > element selector > universal selector 
+    So use the least specific valued selectors while styling, as that can be overidden whenever we want.
+ -->

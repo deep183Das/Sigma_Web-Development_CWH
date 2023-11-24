@@ -1,0 +1,14 @@
+
+CSS Box Model - Padding -> Border -> Margin (inside out from "content")
+
+Each element of HTML is like a box in CSS.
+Total height / width of an element comes after adding all these along with the content.
+    Total Width = Width + Left Padding + Right Padding + Left Border + Right Border + Left Margin + Right Margin
+    Total Height = Height + Top Padding + Bottom Padding + Top Border + Bottom Border + Top Margin + Bottom Margin
+
+In our display feature, there is a DPI factor, for which the actual border will seem to look little different.
+
+Concepts :
+    1. box-sizing: border-box;
+
+    2. margin collapse

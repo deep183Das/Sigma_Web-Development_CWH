@@ -1,0 +1,24 @@
+
+-> Attribute Selector
+-> CSS Specificity & Cascade 
+
+In CSS, to resolve conflicts "Cascade Algorithm" is there.
+
+CSS stands for Cascading Stylesheets. The cascade is the algorithm for solving conflicts where multiple CSS rules apply to HTML element(s).
+Understanding the cascade algorithm helps you understand how the browser resolves conflicts like this. The cascade algorithm has 4 distinct stages.
+    1. Position and order of appearance: the order in which your CSS rules appear
+        ~> When we have to compare among same type of selectors.
+
+    2. Specificity: an algorithm that determines which CSS selector has the strongest match
+        ~> The order of specificity is :
+           inline style > ID selector > class or pseudoclass or attribute selector > element selector > universal selector 
+
+    3. Origin: the order in which CSS appears and where it comes from, whether that is a browser style, CSS from a browser extension, or your authored CSS
+        ~> If we don't use CSS, then browser use its own Stylesheet, known as "User-Agent Stylesheet".
+        ~> This will be overridden if we specify any styling.
+
+    4. Importance: some CSS rules are weighted more heavily than others, especially with the "!important" rule type
+        ~> If this "!important" is specified after some styling, that will overrirde any other same type of stylings.
+        ~> Then inline-style will also be overrirden.
+
+Check out this site for further details [ https://www.codewithharry.com/tutorial/css-specificity/ ]

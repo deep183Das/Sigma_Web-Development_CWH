@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Sizing Units (em , rem , vmin , vmax)</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+    /* 
+        "html" is the "root element"
+    */
+        html {
+            font-size: 12px;
+        }
+
+        .box {
+            box-sizing: border-box;
+            border: 2px solid black;
+            width: 80vw;
+            height: 10vh;
+            margin: auto;
+            background-color: aqua;
+        }
+
+        .container {
+            box-sizing: border-box;
+            border: 2px solid black;
+            width: 80vw;
+            height: 80vh;
+            margin: 23px auto;
+
+        /* it has 16px default font size */
+            /* font-size: 18px; */
+            background-color: aquamarine;
+        }
+        
+        .container p{
+        /* 
+            change the font size wrt the "element's font size" using "em"
+        */
+            /* font-size: 1.5em; */
+            /* here font size = 1.5x 18px = 24px */
+
+        /* 
+            change the font size wrt the "root element's font size" using "rem"
+        */
+            font-size: 2rem;
+            /* now font size becomes = 24px */
+            /* for this to get applied, we need to remove the given "font-size" from ".container" otherwise that value will be inherited. */
+    /* 
+        In the "inspect --> computed" of p's property, we can see that it has inherited the font-size property given to ".container" 
+
+        some properties in CSS inherit, one of them is "font-size"
+
+        now here the font-size value is 1.5em 
+        i.e. (1.5x of 18px) = 27px 
+
+        if no specified value is used in .container
+        then as per the default value, 
+        font-size of p will become = (1.5x 16px) = 24px
+    */
+
+    /* 
+            if we write "2em" now, then also the value will be 24px as the "html's" property(font-size) gets inherited
+    */
+        }
+
+        .mycont {
+            background-color: red;
+            color: yellow;
+            font-size: 22px;
+
+            width: 100vmin;
+            /* width: 100vh; */
+        /* 
+            100vmin = 100vh (in this device)
+        */
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        This is a box
+    </div>
+    <div class="container">
+        <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi id, ullam corporis, rerum sunt ad veritatis accusantium neque maiores dolores debitis repellat ipsam. Molestiae, tempora facilis! Maxime consequuntur ad doloremque nihil. Harum temporibus et adipisci eius rerum molestiae quia mollitia voluptates quidem ullam laudantium nesciunt exercitationem totam hic assumenda molestias expedita explicabo, eligendi a doloribus similique?
+        </p>
+    </div>
+
+    <div class="mycont">
+        I am another container
+    </div>
+</body>
+</html>
+
+<!-- 
+    In computers -> height(vmin = vh) < width  
+    In phones ->    height > width(vmin = vw)  
+ -->

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Font</title>
+
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@600&display=swap" rel="stylesheet"> -->
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@600&family=Poppins:wght@300&display=swap');
+
+        /* Uisng "font-family" the fonts are changed */
+        h1 {
+            font-family: 'Poppins', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        p {
+            /* font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+            font-family: 'Baloo Bhaijaan 2', sans-serif;
+            
+            /* font-style: italic; check several font styles */
+            /* font-weight: 500;   for making the content bold */
+            text-decoration: underline; /* to underline or other drawings */
+        }
+        /* 
+            This is under a concept "fall-back fonts", which are the other comma separated fonts
+            other than the first one which is the main font(if that's is not available then fall-back
+            fonts will be applicable from left first and onwards).
+        */
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Fonts</h1>
+        <p>This is a video on fonts</p>
+        Great <a href="https://codepen.io/web-dot-dev/pen/yLojraG" target="_blank">site</a> to check for different fonts available.
+    </div>
+</body>
+</html>

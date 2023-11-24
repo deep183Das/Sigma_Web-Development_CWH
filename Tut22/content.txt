@@ -1,0 +1,10 @@
+
+CSS Sizing Units - px, vw, vh,               (index01)
+                   rem, em, vmin, vmax,      (index02)
+                   max-height, min-height, % (index03) 
+
+~> Even we can set the height according to the viewport height also.
+
+~> 1 pixel = 1 px = (1/196) x 1 inch.    
+
+~> For more details about units [ https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Values_and_Units ]

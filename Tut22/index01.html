@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Sizing Units (px , vw , vh)</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            border: 2px solid black;
+            /* width: 1536px; */
+        /* 
+            As my computer's resolution = 1920x1080 using 125% zoom in effect
+            So to fit my laptop screen with 100% display ( (100/125)x100% = 80% )
+            = my computer's resolution x 80%
+        */
+
+    /* 1 px = (1/196)th of an inch */
+    /*  
+        but for other monitors with different resolutions, 
+        the page's content will not look good, so use a "responsive unit" ->
+        "vw" --> view-port width
+
+        100vw = 100% of the view-port width
+
+        "vh" --> view-port height
+        100vh = 100% of the view-port width
+    */
+            /* width: 100vw; */
+
+    /* 
+        now in order to use smaller vw and centre the box
+        use "margin: auto;" as it will take marigns automatically 
+        from both sides
+    */
+            width: 80vw;
+            height: 10vh;
+            margin: auto;       /* to centre the div */
+    /* 
+        "margin: auto;" will centre the block-level elements only
+    */
+            text-align: center; /* to centre the text content */
+
+            background-color: aquamarine;
+
+        /* without "box-sizing", there will be small side scroll-bar just for border */
+            box-sizing: border-box;
+        }
+
+        .inline {
+            border: 2px solid rgb(0, 0, 0);
+            background-color: rgb(196, 66, 37);
+            color: white;
+
+    /* 
+        As this is an inline element, so we can't use
+        "margin: auto;" & we can't also give "width"
+    */
+    /* To centre it (in upcoming tutorials) */
+        }
+
+        .container {
+            box-sizing: border-box;
+            border: 2px solid black;
+            width: 80vw;
+            height: 80vh;
+            margin: 23px auto;
+        /* 
+            first one --> top-bottom margin
+            "23px" [ top-bottom margin ]
+            second one --> horizontal margin
+            "auto" [ left-right margin ]
+        */
+            background-color: aquamarine;
+            text-align: center;
+        }
+    /* one kind of responsive designing in webpage -> "vw", "auto" */
+    </style>
+
+</head>
+<body>
+    <div class="box">
+        This is a box
+        <!-- This is a block-level element's content -->
+    </div>
+    <span class="inline">
+        This is a span and to centre it(in upcoming tutorials)
+        <!-- This is an inline element's content -->
+    </span>
+    <div class="container">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi id, ullam corporis, rerum sunt ad veritatis accusantium neque maiores dolores debitis repellat ipsam. Molestiae, tempora facilis! Maxime consequuntur ad doloremque nihil. Harum temporibus et adipisci eius rerum molestiae quia mollitia voluptates quidem ullam laudantium nesciunt exercitationem totam hic assumenda molestias expedita explicabo, eligendi a doloribus similique?
+    </div>
+</body>
+</html>

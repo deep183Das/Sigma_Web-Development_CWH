@@ -1,0 +1,19 @@
+
+CSS Fonts, Texts, Color properties
+
+~> While choosing fonts, it's a good practice to choose at least one generic font, so that
+   if the user doesn't have the font, then there will be no problem. 
+
+~> Check different fonts how they look [ https://codepen.io/web-dot-dev/pen/yLojraG ]
+
+~> To use external fonts in webpage, search in google (google fonts) [ https://fonts.google.com/ ]
+   to browse external fonts.
+   --> we can either "import" that or get a "link" 
+   --> use the font family in the CSS file or in the style tag
+   --> paste the link inside the "head" tag or paste the import link inside the "style" tag
+
+~> a popular external font --> "Poppins"
+
+~> We can import several fonts all at once with url import link available. It's recommended to 
+   import multiple fonts at a time but not too many also.
+   

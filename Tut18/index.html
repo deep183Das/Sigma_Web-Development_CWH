@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Box Model</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            background-color: aqua;
+        }
+
+        .box1 {
+            color: yellow;
+            padding: 10px;
+            margin: 25px;
+
+            border: 2px solid blue;
+
+            height: 200px;
+            box-sizing: border-box;
+    /* 
+        When "box-sizing" property is given then the content size gets updated so that the given height becomes the sum of (content height
+        + both paddings + both borders), excluding margins as they the outermost part, but in the calculation of total height and width 
+        without giving "box-sizing" property includes "margins" & content height itself will be given value and others also will be
+        explicitly specific 
+    */
+        }
+        .box2 {
+            color: red;
+            padding: 10px;
+            margin: 25px;
+
+            border: 2px solid black;
+            height: 200px;
+            box-sizing: border-box;
+        }
+    /* 
+        Between box1 and box2, their margins overlap and according to the concept of "margin collapse", if two margins collapse 
+        then the margin with the highest value will be only shown in display, that's why only one "25px" margin is there between 
+        two div elements 
+    */
+    </style>
+</head>
+<body>
+    <div class="box box1">I am a box</div>
+    <div class="box box2">I am another box</div>
+</body>
+</html>
+
+<!-- 
+    EMMET in VS code
+        m:0 -> margin: 0;
+        p:0 -> padding: 0;
+ -->

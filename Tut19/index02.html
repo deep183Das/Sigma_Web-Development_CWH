@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>CSS Text</title>
+
+    <style>
+        p {
+            font-size: 20px;
+            /* it has many other units also */
+
+            line-height: 2;
+            /* space between two lines, default value 110% - 120% i.e. 1.1 or 1.2 */
+        }
+        p:first-child {
+            letter-spacing: 0.5cm;
+        }
+
+        h1 {
+            text-transform: lowercase;
+            text-align: center;
+        }
+        h2 {
+            /* 
+                in order to capitalize a sentence, it will make first letter of each word capital
+            */
+            text-transform: capitalize;
+            text-decoration: underline;
+            text-decoration-color: red;
+
+            /* text-decoration-style: wavy; */
+            text-decoration-thickness: 5px;
+
+            /* text-indent: 45px; */
+            width: 45px;
+        }
+
+        .lorem {
+            border: 2px solid red;
+            width: 145px;
+            
+            /* some text will get overflowed */
+
+            /* text-overflow: ellipsis; */
+            /* text-overflow: clip;
+            overflow: hidden; */
+
+            word-break: break-all;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Font</h1>
+        <h2>about fonts</h2>
+    </div>
+    <div>
+        <p>CSS Font Properties</p>
+        <p class="lorem">Lorem ipsum, dolor sit amet consectetur adipisicing elit. A pariatur totam et numquam ullam iusto molestiae quis eaque quidem cum! Mollitia eaque non sed, aliquid rerum enim, reprehenderit esse velit quisquam cupiditate amet excepturi consequatur fugiat quibusdam pariatur minus assumenda. Ducimus ad pariatur nihil doloremque!</p>
+    </div>
+</body>
+</html>
