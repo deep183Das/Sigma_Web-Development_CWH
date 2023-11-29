@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More on CSS Selectors</title>
+
+    <style>
+
+    /* i.e. if ".box" is the first-child of its parent ".boxes" then the following properties will be applied */
+        /* .box:first-child {
+            background-color: red;
+        } */
+
+    /* can select the first line (first line as seen from our devices) */
+        /* .box::first-line {
+            color: red;
+        } */
+
+    /* all the elements inside "boxes" : using universal selector in a new way */
+        /* .boxes *{
+            color: blue;
+            border: 2px solid black;
+        } */
+
+    /* using attribute selector(can be done for any kind of attributes used in HTML) */
+        /* [data-color="primary"] {
+            color: red;
+            padding-top: 45px;
+        } */
+
+    /* grouping multiple selectors by comma(,) */
+        /* p, a, .box {
+            font-family: 'Courier New', Courier, monospace;
+        } */
+
+    /* understanding n-th child (counting starts from 1) */
+        /* .box:nth-child(even) {
+            background-color: yellow;
+        }
+        .box:nth-child(odd) {
+            color: red;
+        }
+        .box:nth-last-child(1) {
+            background-color: aqua;
+        } */
+
+    /* about "before" and "after" */
+        .boxes::before {
+            content: "Deepanjhan is a good boy";
+            color: blue; 
+        }
+            /* this will insert the content before the 'main content' of ".boxes" and thus we can dynamically insert content using CSS */
+        .boxes::after {
+            content: "I am currently learning web development";
+            color: red;
+        }
+            /* these are called "pseudo-elements"(not selectors) in which we can obviously use CSS stylings */
+
+    /* about list-markers : already done */
+
+    /* about selection : if selected then the following properties will be applied */
+        ::selection {
+            color: aqua;
+            background-color: black;
+        }
+            /* as this is not written in conjuction with any specific elements, so any of them if gets selected, the properties will show effects and the dynamically inserted texts/contents will not get selected at all until changed from it specific defintiion itself */
+        
+    /* about "first-letter" */
+        .boxes::first-letter {
+            color: pink;
+        }
+        /* the first-letter of the overall content irrespective of dynamically produced or not  */
+        .box::first-letter {
+            color: peru;
+            font-size: 45px;
+        }
+
+    /* targetting specific part of input */
+        input::placeholder {
+            color: blue;
+            font-size: 7px;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="boxes">
+        <div class="box" data-color="primary">I am first box</div>
+        <!-- "data-color" is an arbitrary attribute name -->
+        
+        <div class="box">Hey, I am a box</div>
+        <div class="box">Hey, I am a box</div>
+
+        <input type="text" placeholder="Type your name here">
+    </div>
+    <p>I am a paragraph.</p>
+</body>
+</html>
+
+<!-- 
+    ~> "div > p" means that "p" which is the direct child of "div" (child selector)
+    ~> "div p" means decendent selector (any p inside of div)
+ -->

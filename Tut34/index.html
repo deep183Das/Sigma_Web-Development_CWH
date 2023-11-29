@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Float and Clear</title>
+    <style>
+        .cards {
+            border: 2px solid black;
+
+        /* if image is bigger than the container specified, then it will overflow, to resolve this */
+            display: flow-root;
+        /* now it's within the container */
+
+        /* methods for stopping the overflow cases : 
+            ~> setting the margins
+            ~> overflow: auto;
+            ~> display: flow-root;
+        */
+        }
+        .card {
+            border: 2px solid red;
+        }
+        img {
+        /* by default, the image will allow the latter divs below its position */
+            /* float: left; */
+        /* it'll allow its content to its right */
+            float: right;
+        }
+
+        /* now if we want that the 2nd card doesn't allow any other element to float to its right then use "clear" property */
+        .card:nth-child(3) {
+            /* image is the first child */
+            background-color: aqua;
+            clear: right;
+            /* clear: both; */
+        /* for both sides (for right and left) */
+        }
+    </style>
+</head>
+<body>
+    <div class="cards">
+        <img src="image01.png" alt="boat" width="260px">
+        <div class="card">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit nisi magnam error illum laudantium ipsam minima accusantium assumenda cupiditate, voluptas in, quidem expedita dicta, iure temporibus sint aliquam. Doloribus nostrum nam cumque sit eum.</p>
+        </div>
+        <div class="card"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore quaerat, tempore aut, nam necessitatibus illum officiis dolorem minus eos velit alias obcaecati, suscipit voluptates repellat? Quis consequuntur, illo rem numquam ducimus ratione voluptatum tenetur dolor obcaecati maxime alias eius, cumque officiis itaque. Recusandae similique, accusantium reprehenderit reiciendis odio ut vitae quod, aperiam doloribus minus a repellendus voluptate modi corporis! At ipsa ex cumque fugit vero dolores, dolorem iure pariatur blanditiis, similique recusandae illum consequatur explicabo magni? In itaque delectus vero iusto, ex unde, dolores optio saepe inventore et illo cumque reprehenderit neque libero reiciendis porro nobis hic ab ducimus. Vel, omnis. Placeat vitae nihil, quae, excepturi expedita odit repudiandae consequatur esse quibusdam pariatur incidunt ratione atque non adipisci voluptatem! Eveniet fugiat doloremque saepe ipsam et, sunt, voluptates dignissimos eos, ipsa quidem neque voluptatum autem quod nihil sed alias facere aperiam enim nostrum laborum sequi ab itaque. Officiis dolores pariatur iste quo quis ratione doloremque eos, ipsum inventore earum facilis eius nemo consequuntur impedit et temporibus ex alias maxime ipsa placeat totam voluptatum. Dolor repellat excepturi quos perferendis praesentium dolorem nihil aperiam commodi harum ipsa similique a voluptatibus delectus est iure, sint omnis aspernatur fugit autem. Repudiandae omnis quos nihil vitae cumque sed, debitis minus quam at consequatur eius et in dolores veniam temporibus ex facilis eum dolore vel magnam incidunt. Nisi veniam vitae similique velit commodi odio fugit, animi fugiat aspernatur magnam nobis doloribus itaque earum eligendi quisquam distinctio voluptatem nam, iste, iusto dolores nesciunt. Quam consequatur laudantium, iste perferendis optio deserunt! Necessitatibus doloremque a, enim aperiam aliquid nam. Laudantium quasi ipsam saepe pariatur maiores similique nemo necessitatibus vel labore corrupti asperiores iste expedita earum possimus amet sapiente, libero mollitia? Beatae, laborum, unde iure reiciendis voluptates odio ea aliquid veniam eveniet repellat animi voluptate molestiae non temporibus cum sapiente omnis labore aperiam dolores. Molestias, assumenda cupiditate doloremque totam, cumque ea quos, sunt architecto ad voluptate unde aliquid? Mollitia fugiat, quia, aut est doloribus ipsum praesentium porro a reiciendis quos consequatur. Tenetur, magnam ea?</p></div>
+        <div class="card">Card3</div>
+    </div>
+</body>
+</html>
+<!-- 
+    Modern layouts are no longer designed like this (image floating in one direction, just like the content of a newspaper)
+ -->

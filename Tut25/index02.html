@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NAV Bar and styling</title>
+
+    <style>
+        /* In order to make nav-bar */
+
+        nav ul li {
+        /* to remove the markers */
+            list-style: none;
+
+        /* set the padding */
+            padding: 23px;
+        }
+
+        nav ul {
+        /* to bring them in a line, applied on the container of the "li" elements */
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+        </ul>
+    </nav>
+</body>
+</html>
+<!-- 
+    In inspect, if we write anything inside the "element.style{}"
+    Then that will reflect only on the specific element and that will be added as 
+    the inline style
+ -->

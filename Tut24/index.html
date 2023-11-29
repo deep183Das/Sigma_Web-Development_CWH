@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Shadows and Outline</title>
+
+    <style>
+        .box {
+            border: 2px solid black;
+            padding: 34px;
+
+            box-shadow: 14px 10px 12px 3px #349d36;
+            /* box-shadow: 14px 10px 12px 6px #349d36 inset; */
+
+        }
+        .text-elem {
+            text-shadow: 5px 5px 3px #e695f7;
+
+            border: 2px solid red;
+            border-radius: 5px;
+        /* 
+            outline style will follow the border 
+        */
+            outline: 2px solid black;
+            outline-offset: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        I am a box
+    </div>
+    <p class="text-elem">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas ea quod qui officia deserunt suscipit velit nam odit autem mollitia quam ipsum, repudiandae beatae accusamus nulla, eaque quia atque reprehenderit! Laboriosam placeat tempore sapiente.
+    </p>
+</body>
+</html>
+
+<!-- 
+    Syntax for "box-shadow" :
+        box-shadow: h-offset v-offset blur spread color inset;
+
+    meaning :
+    "h-offset" and "v-offset": Determines the shadow's horizontal and vertical position.
+    "blur": The larger the value, the blurrier the shadow.
+    "spread": Expands or shrinks the shadow size.
+    "color": Defines the shadow color.
+    "inset": Makes the shadow inner.
+
+    Go to "inspect" and change these values as u want and then copy the same values and paste here
+ -->
+
+<!-- 
+    Syntax for "text-shadow" :
+        text-shadow: h-offset v-offset blur color;
+ -->
+
+<!-- 
+    Syntax for "outline" :
+        outline: width style color;
+    
+    "style" determines the style of the outline such as "solid", "dotted", or "dashed"
+-->
+
+<!--
+    Differences between Outlines and Borders:
+        While both can visually appear similar, outlines differ from borders in a few ways:
+
+    "Position:" Outlines don't take up space(not the part of box model); they're drawn around the element, outside of any border.
+    "Offset": Using the "outline-offset" property, you can set the space between an outline and the edge or border of an element.
+    "Width": Borders can have varying widths on different sides, outlines have a uniform width.
+    "Rounded Corners": Borders can have rounded corners using "border-radius", while outlines generally cannot.
+ -->

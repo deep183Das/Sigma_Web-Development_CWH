@@ -1,0 +1,24 @@
+CSS Position Property
+
+(index01)
+    Static Position
+        ~> It will be there where it is
+        ~> No effect of other peoperties(top, bottom, left, right, z-index)
+    Relative Position
+        ~> Position will be relative to its current place
+        ~> Now different properties can be applied
+    Absolute Position
+        ~> when it's specified, then it seems like that box is not even in the normal document flow
+
+An element will be considered as "positioned" with the following properties.
+    * "transform", "filter", or "perspective" properties can also make an element appear as positioned
+        
+(index02)
+    Fixed Position
+        ~> The box will be fixed in its position in the webpage's view.
+        ~> No matter how much you have to scroll, it will not move.
+    
+(index03)
+    Sticky Position
+        ~> It will be in its position until it gets scrolled, and when it will just reach the given boundaries
+        then onwards it behaves like to have fixed position.

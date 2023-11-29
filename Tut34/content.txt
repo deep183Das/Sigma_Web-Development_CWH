@@ -1,0 +1,4 @@
+
+CSS Float and Clear
+    but for modern layouts they are not used anymore
+    use of flexbox is more famous

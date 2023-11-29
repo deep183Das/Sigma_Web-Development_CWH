@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Display Property</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box1 {
+            border: 2px solid blue;
+            /* display: inline; */
+        /* making this div an "inline" element */
+            display: inline-block;
+        /* making this div an "inline-block" element */
+
+            padding: 45px;
+            margin: 33px;
+
+            width: 344px;
+        /* 
+            But here the margin and the padding is not applying from the top 
+            This is because, now it's an inline element which doesn't support padding / margin from the top
+            We can't even set its width also. Inline element has no significance of having "width" property
+            [ The "display: inline" property prevents width from having an effect. ]
+
+            To resolve it, make "display : inline-block"
+        */
+        }
+        /* 
+            Gnerally, most of the time flex box is used to centre different things or to sidewise move them
+        */
+
+        .box2 {
+            /* display: none; */
+        /* it will make the element disappear completely along its padding, border and margins */
+            /* visibility: hidden; */
+        /* here the box will disappear but its space will still be there */
+
+            /* display: flex; */
+            display: inline-flex;
+            justify-content: center;
+        /* 
+            The extra gap between them will fall down to one overlapping margin if this 
+            "display: flex" property is applied to both the boxes 
+        */
+        /* 
+            if we need to allign these two boxes in the same line then use 
+            "display: inline-flex;"
+        */
+        }
+    </style>
+</head>
+<body>
+    <div class="box1 box2">
+        I am box
+    </div>
+    <div class="box1">
+        I am also a box
+    </div>
+
+    <span>I am a good</span>
+    <span>boy whose name is Deepanjhan Das</span>
+</body>
+</html>

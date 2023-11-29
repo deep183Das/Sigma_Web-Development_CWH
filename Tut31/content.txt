@@ -1,0 +1,8 @@
+
+CSS Media Queries
+    ~> For making our websites responsive, one of the most important aspect is "media query"
+    ~> Thus good looking websites in our desktop will also look good in our mobile phones also (by adaptation)
+    
+media query
+    if another person is accessing the website from another 
+    device, then the styles can be changed using these queries 

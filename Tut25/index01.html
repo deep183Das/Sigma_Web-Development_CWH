@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styling Lists using CSS</title>
+
+    <style>
+        nav ul li {
+            /* list-style: none; */
+            /* list-style: devanagari; */
+        /* for more styles, go to inspect and check what u need and modify the styling code here at last */
+
+            border: 2px solid black;
+            background-color: yellow;
+        /* marker is not a part of list item */
+        /* in order to give marker border and background-color */
+            list-style-position: inside;
+
+        /* one can use some image in place of the markers */
+            /* list-style-image: url(image01.gif); */
+        /* one can set the marker an emoji too */
+            /* list-style-type: "😃"; */
+        /* press "windows + ." to get the emoji keyboard */
+
+        /* or use them (list style position and type) together */
+            /* list-style: disk inside url(image01.gif); */
+        /* only one of "disk" and "image" will show up */
+            list-style: inside url(image01.gif);
+            /* list-style: disk inside; */
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+        </ul>
+    </nav>
+</body>
+</html>
+
+<!-- 
+    display: list-item 
+        this property consists of two things
+        1. marker (default value : disk)
+        2. list item
+    
+    to remove the "disk"/marker, 
+        "display: block"
+    which is not a good practice
+ -->

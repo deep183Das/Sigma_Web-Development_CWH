@@ -7,3 +7,4 @@
     -> in VS code - setting - Live Preview --> change the local host ip address to yours
     -> make sure the connection of your wifi is made private 
     -> now in your phone, write the "ip adreess : port number" to preview your website in phone 
+    

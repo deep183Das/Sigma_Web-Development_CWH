@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Card Design</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&family=Poppins&display=swap');
+        
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        body {
+            background-color: gray;
+            padding: 45px;
+        }
+
+        .card {
+            background-color: white;
+            border-radius: 17px;
+            width: 198px;
+            height: 344px;
+            padding: 0px 0px 40px 0px;
+        }
+        .image {
+            padding: 5px;
+            width: 178px;
+        }
+        img {
+            padding: 5px;
+            width: 178px;
+            border-radius: 20px;
+        }
+
+        .content {
+            padding: 0 15px 15px 15px;
+        }
+        h2 {
+            font-size: 20px;
+            font-family: 'Poppins', sans-serif;
+        }
+        p {
+            font-size: 10px;
+            color: gray;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        .button {
+            padding: 0px 50px 15px 50px;
+        }
+        button {
+            border: none;
+            background-color: rgb(0, 170, 255);
+            color: rgb(0, 60, 255);
+            font-weight: bold;
+            font-size: 10px;
+            padding: 5px 17px ;
+            border-radius: 17px;
+        }
+
+        .capsuls {
+            padding: 0px 0px 5px 12px;
+        }
+        .capsuls span {
+            border: 1px solid gray;
+            color: gray;
+            padding: 2px 5px 2px 5px;
+            font-size: 12px;
+            border-radius: 17px;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="image">
+            <img src="card.jpg" alt="card">
+        </div>
+        <div class="capsuls">
+            <span>Nature</span>
+            <span>Lake</span>
+        </div>
+        <div class="content">
+            <h2>Deep</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, consequuntur. Culpa distinctio iusto similique porro minus dolores pariatur harum labore magnam? Ad perspiciatis quam provident, vitae doloribus.</p>
+        </div>
+        <div class="button">
+            <button>Read More</button>
+        </div>
+    </div>
+</body>
+</html>

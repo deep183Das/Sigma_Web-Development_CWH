@@ -1,0 +1,20 @@
+CSS Display Property
+    Changing the default display property of html elements(e.g. changing a div into an inline type element)
+
+    display: inline;
+    display: inline-block;
+    display: none;
+    visibility: hidden;
+
+    display: block; [ to make inline elements block ]
+    
+Other display properties [we can change their orientation also]
+    display: flex;*
+    justify-content: center;*
+
+    display: inline-flex;*
+
+    display: grid;*
+    display: inline-grid;*
+
+[ https://developer.mozilla.org/en-US/docs/Web/CSS/display ]

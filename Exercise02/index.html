@@ -15,16 +15,22 @@
     <title>CSS Exercise</title>
 <!-- My style sheet's code here -->
     <style>
-        /* specificity = 2 */
-        div p {
+        /* specificity = 1 */
+        p {
             background-color: blue;
             color: white;
         }
 
-        /* specificity = 11 */
-        p:first-child {
+        /* specificity = 12 */
+        div p:first-child {
             background-color: yellow;
             color: red;
+        }
+
+        /* doing some modifications using "n-th child" in CSS */
+        div p:nth-child(3){
+            /* applied on all the 3rd child p of all divs */
+            background-color: orangered;
         }
     </style>
 </head>
@@ -34,7 +40,6 @@
         <p>I am another para</p>
         <p>I am also another para</p>
     </div>
-
     <div>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde asperiores doloremque recusandae possimus laborum earum nisi rerum ipsa deserunt totam. Quae sed distinctio consequatur fugit omnis nihil facilis! Molestias eveniet dolorum ipsa dolore, accusamus perferendis!</p>
         <p>I am another para</p>

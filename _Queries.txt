@@ -39,3 +39,13 @@ Q.3> What will be the specificity value of the following selector:
 !! Suggestions :
 
 S.1> "right click -> view page source" to watch the web page's sourse code.
+
+S.2> "ctrl + enter" -> will take your cursor to the exact next line with the same indentation of the previous line 
+                       irrespective of whereever you were in the previous line.
+
+S.3> "windows + shift + s" -> to open the snipping tool
+S.4> "windows + alt + r" -> screen recording 
+S.5> "windows + h" -> audio text writing
+S.6> "windows + d" -> to close and open all the tabs together
+S.7> "windows + tab" -> to get the view of all the opened app  
+S.8> "alt + tab" -> to open the last opened tab 

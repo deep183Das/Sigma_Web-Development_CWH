@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Media Queries</title>
+
+    <style>
+        body {
+            background-color: red;
+        }
+
+    /* 
+    our websites should have several (at least two) break-points
+        e.g. for small phones, large phones/tabs, monitors ... so why we make our website responsive in that way
+        e.g. there is also another kind of monitors(ultra-wide monitors) for which we may show our website differently 
+    */
+        @media only screen and (max-width: 455px)
+        {
+            body {
+                background-color: blue;
+            }
+
+            .boxes {
+                flex-direction: column;
+            }
+        }
+    /* if the screen width is less than 455px then the body's background color will be blue */
+
+        @media screen and (orientation: landscape) 
+        {
+            body {
+                border: 2px solid purple;
+            }  
+        /* 
+            so when the orientation will change from "landscape"(width > height) to 
+            "protrait"(width < height) then we will have no border
+        */
+        }
+
+    .boxes {
+        display: flex;
+    }
+
+    .box {
+        width: 344px;
+        height: 344px;
+        background-color: steelblue;
+        padding: 3px;
+        margin: 3px;
+    }
+    </style>
+
+</head>
+<body>
+    <div>
+        I am a red body guy!
+    </div>
+
+    <div class="boxes">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+</body>
+</html>
+
+<!-- 
+    syntax for media queries(these are used for generating responive websites)
+
+    @media not|only mediatype and (expressions)
+    {
+        CSS-Code;
+    }
+
+    ~> @media will let the system know that a media query is going to be written
+    ~> not mediatype (don't show the defined property to that mediatype, otherwise show in any other mediatype)
+    ~> only mediatype (only for the given mediatype)
+ -->
+
+<!-- 
+    Types of mediafiles
+        all
+        print (for devices like printer)
+        screen (for visuals)
+        speech (for audio)
+ -->
+
+<!-- 
+    When we are using raw css, we use media queries for responsiveness. 
+    But when we use frameworks (e.g, tailwind css, bootstrap) which already use media queries behind the hood
+        there we don't use them any more.
+ -->

@@ -1,0 +1,10 @@
+
+CSS Variables
+    ~> Uisng variables we can change the different aspects of the whole web-page with the single chnage in variable values
+    ~> Here in CSS, variables are defined in different ways
+
+    ~> First using the "root", we can define the global variables
+    ~> Now if we use the same variable name inside some element's styling 
+       giving it some different value, then that will be applicable as being the local variable 
+       and by overriding the global one.
+    

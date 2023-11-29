@@ -1,0 +1,129 @@
+:root{
+/* Group 1 */
+    --color11: rgb(15, 15, 84);
+    --color12: rgb(101, 101, 225);
+    --color13: rgb(152, 216, 255); 
+    --text-color: white;
+
+/* Group 2 */
+    /* --color11: rgb(152, 4, 4);
+    --color12: rgb(240, 22, 22);
+    --color13: rgb(213, 102, 102);
+    --text-color: white; */
+    
+/* Group 3 */
+    /* --color11: rgb(6, 66, 6);
+    --color12: rgb(29, 164, 29);
+    --color13: rgb(119, 251, 119);
+    --text-color: white; */
+
+/* Group 4 */
+    /* --color11: rgb(146, 12, 34);
+    --color12: rgb(205, 48, 74);
+    --color13: rgb(253, 191, 201);
+    --text-color: white; */
+
+/* Group 5 */
+    /* --color11: rgb(131, 57, 45);
+    --color12: brown;
+    --color13: rgb(172, 101, 101);
+    --text-color: white; */
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    background-color: gray;
+    padding: 45px;
+}
+
+.bar {
+    height: 250px;
+    width: 500px;
+    background-color: var(--text-color);
+    border-radius: 12px;
+}
+
+.head {
+    height: 15%;
+    width: 100%;
+    background-color: var(--color11);
+    color: var(--text-color);
+    font-family: 'Courier New', Courier, monospace;
+/* left-top right-top  right-bottom left-bottom */
+    border-radius: 12px 12px 0px 0;
+    text-align: left;
+}
+
+.bar > .head > p {
+    padding: 7px 0px 0px 10px;
+}
+
+.mid {
+    height: 12%;
+    width: 68.2%;
+    background-color: var(--color12);
+    padding: 10px 0px 5px 159px;
+}
+.mid span {
+    font-size: 12px;
+    border: 2px solid var(--color11);
+    border-radius: 7px;
+    padding: 2.5px 9px 5px 9px;
+    margin: 2px;
+}
+.mid span a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.foot {
+    height: 60%;
+    width: 100%;
+    background-color: var(--color13);
+    display: flex;
+}
+.foot .heading {
+    padding: 40px 0px 0px 40px;
+}
+.foot .heading h1 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.foot .content {
+    margin-left: 15px;
+    padding: 2px 10px 2px 10px;
+    border: 2px solid var(--color12);
+    background-color: var(--color12);
+    border-radius: 12px;
+    color: var(--text-color);
+    width: 140px;
+} 
+.foot span {
+    margin: 2px 0px 0px 19.5px;
+}
+
+.foot .search {
+    padding: 10px 0px 0px 105px;
+}
+
+.foot input {
+    border: 2px solid var(--color12);
+    border-radius: 4px;
+    width: 100px;
+}
+.foot input::placeholder {
+    padding-left: 8px;
+}
+.foot input:hover {
+    background-color: wheat;
+}
+
+.copyright {
+    padding-left: 10px;
+    padding-top: 2px;
+    font-size: 12px;
+}

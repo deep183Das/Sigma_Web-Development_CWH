@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Overflow property</title>
+    <style>
+        .box {
+            width: 30vw;
+            height: 10vh;
+            border: 2px solid black;
+
+    /* to resolve this overflow problem */
+
+        /* here using "scroll", even if it doesn't overflow, there will be a scrollbar appearing on the display */
+            /* overflow: scroll; */
+        /* "auto" : if it's overflowing then scrolbar will be added otherwise not */
+            /* overflow: auto; */
+        /* one can individually control the x and y overflow */
+            /* overflow-x: hidden;
+            overflow-y: scroll; */
+        /* or use overflow short-hand, 1st on is for "x" and the second one is for "y" */
+            overflow: hidden auto;
+            /* overflow: scroll hidden; */
+
+        /* "hidden" will hide the overflown part but we can programatically scroll */
+            /* overflow: hidden; */
+        /* "clip" property will programatically disable the "scrolling" property */
+            /* overflow: clip; */
+        
+            /* white-space: nowrap; */
+        /* then it will take full horizontal width and no words will fall on to the next line */
+
+            /* text-overflow: ellipsis; */
+        /* it will bring "..." at the end of each line and the rest of the part will be hidden */
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        I am good boy and I love to write Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse, expedita magni. Ducimus tempora molestias reprehenderit commodi consequuntur eaque dolore, cum, ipsum laudantium voluptatum corrupti impedit quas eligendi officia unde quod exercitationem voluptatem? Fugit, explicabo. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem necessitatibus deserunt laborum, quam libero numquam possimus totam quo nulla ad delectus repellendus architecto neque.
+    </div>
+</body>
+</html>
+
+<!-- 
+    If we have a content more than the width of the box 
+    then the content will overflow, which can be resolved using CSS Overflow properties
+ -->

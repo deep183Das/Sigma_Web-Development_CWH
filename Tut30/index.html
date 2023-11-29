@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Variables</title>
+    <style>
+        /* defining variables globally in CSS */
+        :root{
+            /* the following are the variables with their significance in comment */
+            --color: rgb(255, 0, 247);  /* main color */
+            --seccolor: rgb(231, 164, 246); /* secondary color */
+            --defPad: 23px; /* default padding */
+            --defOp: 0.4;   /* default opacity */
+        }
+
+
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .nav {
+            /* background-color: rgb(22, 237, 112); */
+            
+            background-color: var(--color, blue);
+        /* using the defined global variable */
+        /* "blue" becomes the "fallback" color option. If the choosen variable is not found, then it will be applied */
+        }
+
+        ul {
+            display: flex;
+        }
+        ul li {
+            list-style: none;
+            padding: var(--defPad);
+            border: 2px solid var(--seccolor, black);
+
+            opacity: var(--defOp);
+        }
+
+        ul li:first-child {
+            --color: rgb(230, 87, 8);
+            background-color: var(--color, blue);
+        }
+
+        .container {
+            /* background-color: rgb(172, 243, 201); */
+
+            background-color: var(--seccolor, purple);
+        /* using the defined global variable */
+        }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+        </ul>
+    </div>
+    <div class="container">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium cumque enim asperiores natus harum maiores fugit, maxime deserunt ipsa sapiente, exercitationem eveniet culpa reiciendis impedit dolorum doloremque vitae pariatur unde optio perferendis eius, eum ullam ratione. Itaque explicabo, deleniti quidem necessitatibus enim ut saepe temporibus.
+    </div>
+</body>
+</html>
+
+<!-- 
+    CSS Variables can not only hold the values of colors, but also for many other kind of properties too...
+ -->

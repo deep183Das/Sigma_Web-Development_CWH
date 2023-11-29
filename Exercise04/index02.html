@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS MultiColor Website</title>
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+    </style>
+    <style>
+        
+        /* :root {
+            --primary-color: #ad5afacc;
+            --secondary-color: #e3cff5cc;
+            --text-color: white;
+        } */
+    
+        :root {
+            --primary-color: #061872cc;
+            --secondary-color: #6ea5fccc;
+            --text-color: white;
+        }
+
+        /* :root {
+            --primary-color: #0f6f21cc;
+            --secondary-color: #c5f1c6cc;
+            --text-color: white;
+        } */
+
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        body {
+            background-color: var(--secondary-color);
+        }
+        
+        nav {
+            background-color: var(--primary-color);
+            padding: 12px 0;
+        }
+
+        ul li {
+            list-style: none;
+        /* another way of not using "flexbox" */
+            display: inline;
+            padding: 23px;
+            font-weight: bolder;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        ul li a {
+        /* to remove the underline for the "a" tag */
+            text-decoration: none;
+            color: var(--text-color);
+        }
+    </style>
+
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/">About</a></li>
+                <li><a href="/">Services</a></li>
+                <li><a href="/">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!-- solved by Haary bhai -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Card Design</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background-color: grey;
+            padding: 45px;
+            display: flex;
+        }
+        .card {
+            background-color: white;
+            width: 198px;
+            /* height: 404px; */
+        /* if "height" is commented out, then it will be automatically adjusted */
+            border-radius: 7px;
+
+        /* for getting paddings differently */
+                /* top right bottom left */
+            padding: 0px 0px 34px 0px;
+
+            margin: 4px auto;
+        }
+        
+        .image {
+            padding: 10px;
+        }
+        .image img {
+            border-radius: 7px;
+        }
+
+        .capsuls {
+            /* top right bottom left (different paddings are allowed like this) */
+            padding: 0px 10px 0px 14px;
+        }
+        .capsuls span {
+            border:  1px solid gray;
+            border-radius: 11px;
+            padding: 0px 6px;
+            font-size: 12px;
+        }
+
+        .content {
+            /* top-bottom left-right */
+            padding: 7px 13px;
+            font-family: 'Poppins', sans-serif;
+        }
+        .content p {
+            font-size: 9px;
+            color: gray;
+        }
+
+        .button {
+            text-align: center;
+        }
+
+        .button button {
+            /* to remove the border of the button */
+            border: none;
+            /* top-bottom left-right */
+            padding: 4px 11px;
+            border-radius: 13px;
+            background-color: rgb(167, 204, 224);
+            color: rgb(93, 93, 220);
+            font-size: 8px;
+            /* only margin from the top */
+            margin-top: 9px;
+            /* margin: 9px 0 0 0; */
+            /* to make it bold */
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="image">
+            <img src="card.jpg" alt="card" width="178px">
+        </div>
+
+        <div class="capsuls">
+            <span>Nature</span>
+            <span>Lake</span>
+        </div>
+        <div class="content">
+            <h2>Deep</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis odit tempora minima at, sunt commodi eveniet, cum eius laborum debitis hic voluptate nesciunt.</p>
+        </div>
+        <div class="button">
+            <button>Read More</button>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="image">
+            <img src="card.jpg" alt="card" width="178px">
+        </div>
+
+        <div class="capsuls">
+            <span>Nature</span>
+            <span>Lake</span>
+        </div>
+        <div class="content">
+            <h2>Deep</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis odit tempora minima at, sunt commodi eveniet, cum eius laborum debitis hic voluptate nesciunt.</p>
+        </div>
+        <div class="button">
+            <button>Read More</button>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="image">
+            <img src="card.jpg" alt="card" width="178px">
+        </div>
+
+        <div class="capsuls">
+            <span>Nature</span>
+            <span>Lake</span>
+        </div>
+        <div class="content">
+            <h2>Deep</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis odit tempora minima at, sunt commodi eveniet, cum eius laborum debitis hic voluptate nesciunt.</p>
+        </div>
+        <div class="button">
+            <button>Read More</button>
+        </div>
+    </div>
+</body>
+</html>
