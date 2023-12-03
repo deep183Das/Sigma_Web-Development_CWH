@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid - 5</title>
+<!-- 
+    1. justify-content
+    2. align-content
+    3. place-content
+ -->
+    <style>
+        .container {
+            width: 80vw;
+            height: 60vh;
+            border: 2px solid black;
+    
+            display: grid;
+            grid-template-columns: 1fr 2fr 1fr;
+
+            grid-template-columns: repeat(4, 40px);
+        /* the grid cell to have the items becomes smaller than the items resulting the items going out of the container in the initial part */
+
+            grid-template-columns: repeat(4, 60px);
+        /* the container in both the cases is bigger than the items, so to shift the items with respect to the whole container itslelf, then use the following (aligning the whole grid inside the container) */
+
+    /* horizontal shift */
+            /* justify-content: center; */
+    /* vertical shift */
+            /* align-content: center; */
+            place-content: center;
+        /* to make both the "justify-content" and "align-content" center */
+
+            gap: 34px;
+            /* justify-items: center; */
+            /* align-items: center; */
+        }
+        .item {
+            border: 2px solid red;
+            height: 55px;
+            width: 55px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item item-1">1</div>
+        <div class="item item-2">2</div>
+        <div class="item item-3">3</div>
+        <div class="item item-4">4</div>
+        <div class="item item-5">5</div>
+    </div>
+</body>
+</html>

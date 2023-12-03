@@ -1,0 +1,36 @@
+CSS FlexBox
+
+The following properties are applied on the "container" (parent of the items) :
+    ~> display: flex; [then only we can apply flex properties]
+    ~> properties for 
+        -> "justify-content: ;"
+        -> "align-items: ;"
+    ~> flex direction
+    ~> flex axis
+        -> main axis [main start and main end], [main size]
+        -> cross axis [cross start and cross end], [cross size]
+    ~> flex wrap
+        -> in order to resolve the overflowing case
+        -> nowrap is the default value
+
+    ~> align-content
+        -> different from "align-items"
+        -> shift multiple main axes together as we want
+    
+    ~> There is no "justify-items" in flexbox 
+
+    ~> flex-flow
+        -> flex-flow: <flex-direction> || <flex-wrap>
+
+    ~> gap properties :
+        -> gap
+        -> gap: <row-gap> || <column-gap>
+        -> row-gap & column-gap 
+
+The following properties are applied on the items :
+    ~> order (default value 0)
+    ~> flex-grow (default value 0)
+    ~> flex-shrink (default value 1)
+    ~> align-self
+
+*likewise the properties "flex-start", another one is "stretch"

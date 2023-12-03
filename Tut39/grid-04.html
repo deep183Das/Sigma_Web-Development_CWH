@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid - 4</title>
+<!-- 
+    1. justify-items (applied on container for horizontal shift)
+    2. align-items (applied on container for vertical shift)
+
+    3. align-self (applied on individual items for vertical shift)
+    4. justify-self (applied on individual items for horizontal shift)
+
+    5. "repeat()" syntax
+    6. minmax() property
+ -->
+    <style>
+        .container {
+            width: 80vw;
+            height: 60vh;
+            border: 2px solid black;
+    
+            display: grid;
+            grid-template-columns: 1fr 2fr 1fr;
+
+        /* using "repeat" syntax to repeat 1fr 5 times */
+            grid-template-columns: repeat(5, 1fr);
+        /* using minmax() function, i.e. min value will be the first argument and the max value will be the 2nd argument */
+            grid-template-columns: repeat(4, minmax(100px, 1fr));
+
+            gap: 34px;
+
+        /* each items in each grid cell will be shifted to the specified place along the main axis(genrally horizontally) */
+            justify-items: center;
+        /* along verical axis */
+            align-items: center;
+        /* other than centre we can also use end, start, baseline and many other properties to shift the items in each cell with respect to their grid cells */
+
+        }
+        .item {
+            border: 2px solid red;
+            height: 55px;
+            width: 55px;
+        }
+
+        .item-2 {
+        /* vertical shift */
+            align-self: self-start;
+        /* horiontal shift */
+            justify-self: self-end;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <div class="item item-1">1</div>
+        <div class="item item-2">2</div>
+        <div class="item item-3">3</div>
+        <div class="item item-4">4</div>
+        <div class="item item-5">5</div>
+    </div>
+</body>
+</html>

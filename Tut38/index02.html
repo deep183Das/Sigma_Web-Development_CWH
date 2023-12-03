@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Flexbox - 02</title>
+
+    <style>
+        .container{
+            border: 2px solid red;
+            height: 80vh;
+        
+            display: flex;
+            /* justify-content: center; */
+    
+    /* within flexbox the items are laying along the "flex direction" which is by default left to right, which can also be changed */
+
+        /* to change the layout to column-wise */
+            /* flex-direction: column; */
+        /* in the reverse direction */
+            /* flex-direction: column-reverse; */
+        /* same in row-wise way */
+            /* flex-direction: row; */
+            /* flex-direction: row-reverse; */
+
+
+    /* "flex axis" : 
+        the axis along which the flex items are laying is called the "main axis" and the perpendicular axis is called the "cross axis" 
+
+        flex axes change with the change in flex directions
+
+        "justify-content" and "align-items" work on these axes only
+
+        "justify-content" will shift the content along the "main axis" and "align-content" will do it along the "cross axis"
+
+        the starting of the main axis is the "main-start" and the ending point is "main-end" and similarly for "cross-start" and "cross-end"
+    */  
+
+    /* "flex-wrap" */
+            /* flex-wrap: nowrap; */
+        /* "nowrap" is the default value */
+            flex-wrap: wrap;
+        /* new content will go down to the next line */
+            /* flex-wrap: wrap-reverse; */
+        /* completely arranged in the reversed direction */
+
+
+    /* when we have only one line, then use "align-items: centre" */
+        /* align-items: center; */
+    /* while having more than one line, use "align-content: centre;" */
+            /* align-content: center; */
+            align-content: flex-start;
+            /* align-content: flex-end; */
+
+    /* "flex-flow" property */
+        /* flex-flow: <flex-direction> <flex-wrap> */
+            /* flex-flow: row nowrap; */
+            /* flex-flow: row wrap; */
+            /* flex-flow: row wrap-reverse; */
+        
+    /* gap property */
+            gap: 30px;  
+        /* the gap between all the items will be 30px if they are together in wrapped condition and if there is no defined margin */
+            row-gap: 40px;
+        /* gap between rows */
+            column-gap: 0px;
+        /* gap between columns */
+            gap: 40px 0px;
+        /* row first and then column gap values */
+        }
+        .item {
+            height: 42px;
+            width: 42px;
+            border: 2px solid black;
+            /* margin: 4px; */
+            background-color: blueviolet;
+        }
+    </style>
+    
+</head>
+<body>
+    
+    <main>
+        <div class="container">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <div class="item">4</div>
+            <div class="item">5</div>
+            <div class="item">6</div>
+            <div class="item">7</div>
+            <div class="item">8</div>
+            <div class="item">9</div>
+            <div class="item">10</div>
+            <div class="item">11</div>
+            <div class="item">12</div>
+            <div class="item">13</div>
+            <div class="item">14</div>
+            <div class="item">15</div>
+            <div class="item">16</div>
+            <div class="item">17</div>
+            <div class="item">18</div>
+            <div class="item">19</div>
+            <div class="item">20</div>
+            <div class="item">21</div>
+            <div class="item">22</div>
+            <div class="item">23</div>
+            <div class="item">24</div>
+            <div class="item">25</div>
+            <div class="item">26</div>
+            <div class="item">27</div>
+            <div class="item">28</div>
+            <div class="item">29</div>
+            <div class="item">30</div>
+            <div class="item">31</div>
+            <div class="item">32</div>
+            <div class="item">33</div>
+            <div class="item">34</div>
+            <div class="item">35</div>
+            <div class="item">36</div>
+            <div class="item">37</div>
+            <div class="item">38</div>
+            <div class="item">39</div>
+            <div class="item">40</div>
+            <div class="item">41</div>
+            <div class="item">42</div>
+            <div class="item">43</div>
+            <div class="item">44</div>
+            <div class="item">45</div>
+            <div class="item">46</div>
+            <div class="item">47</div>
+            <div class="item">48</div>
+            <div class="item">49</div>
+            <div class="item">50</div>
+        </div>
+    </main>
+
+</body>
+</html>

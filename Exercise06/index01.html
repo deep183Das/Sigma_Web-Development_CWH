@@ -1,0 +1,609 @@
+<!-- 
+    Design the navbar(at least) using flexbox of the following website
+        https://www.ultraedit.com/downloads/ultraedit-download-thank-you/
+    (solution by me:)
+ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar using Flexbox</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            /* border: 2px solid black; */
+            height: 80px;
+            display: flex;
+            padding: 0px 40px;
+        }
+        nav .box {
+            /* border: 2px solid red; */
+            width: 40vw;
+            height: 100%;
+            margin: 10px 70px 0px 40px;
+        }
+        nav .box img {
+            height: 60px;
+            margin: 16px 0px;
+        }
+        nav .find {
+            /* border: 2px solid blue; */
+            height: 100%;
+            margin: 10px 0px 0px 180px;
+        }
+        .find ul {
+            height: 100%;
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 16px;
+            font-family: 'Poppins', sans-serif;   
+        }
+        .find ul li {
+            padding: 0 18px;
+        }
+        .find ul li a{
+            text-decoration: none;
+            color: black;
+        }
+
+
+        main {
+            /* border: 2px solid black; */
+            margin: 70px 10px;
+        }
+        main .box1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Poppins', sans-serif;   
+            font-size: 42px;
+        }
+        main .box1 p span {
+            font-weight: bolder;
+        }
+        main .box1 p {
+            padding: 0px 20px;
+        }
+        main .box2 {
+            width: 66vw;
+            margin: 30px auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family: 'Poppins', sans-serif;   
+            text-align: center;
+        }
+        main .box2 p:nth-child(1) {
+            font-size: 22px;
+            margin: 20px 0px;
+        }
+        main .box2 p:nth-child(2) {
+            border: 2px solid rgb(0, 174, 255);
+            background-color: rgb(0, 174, 255);
+            border-radius: 6px;
+            padding: 10px 14px;
+        }
+        main .box2 p a {
+            text-decoration: none;
+            color: white;
+        }
+        main .box2 p:nth-child(2):hover {
+            background-color: rgb(6, 152, 219);
+        }
+        main .heading-2 {
+            /* border: 2px solid black; */
+            display: flex;
+            align-items: center;
+            width: 70vw;
+            padding: 20px;
+            margin: 30px auto;
+        }
+        main .heading-2 .box1 {
+            height: 60px;
+            width: 80px;
+            border: 2px solid rgb(242, 242, 17);
+            background-color: rgb(242, 242, 17);
+            border-radius: 6px;
+            font-style: italic;
+            font-weight: bolder;
+            font-size: 40px;
+            margin: 10px 0px;
+        }
+        main .heading-2 .box2 {
+            /* border: 2px solid black; */
+            /* height: 30px; */
+            width: 230px;
+            font-weight: 200;
+            margin: 0px;
+            padding: 0px 0px;
+            text-align: left;
+        }
+        main .heading-2 .box3 {
+            /* border: 2px solid black; */
+            height: 30px;
+            width: 300px;
+            text-align: left;
+            display: flex;
+            align-items: flex-end;
+        }
+        main .boxes {
+            width: 70vw;
+            margin: 0px auto;
+            /* border: 2px solid black; */
+            display: flex;
+            flex-wrap: wrap;
+            /* justify-content: center; */
+            justify-content: space-between;
+            gap: 60px;
+            align-content: center;
+        }
+        main .boxes .box {
+            /* border: 2px solid black; */
+            height: 232px;
+            width: 300px;
+            background-color: rgb(253, 248, 248);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        main .boxes .box .head {
+            /* border: 2px solid black; */
+            text-align: center;
+            margin: 16px 0px;
+            padding: 20px;
+        }
+        main .boxes .box .button {
+            /* border: 2px solid black; */
+            display: flex;
+        }
+        main .boxes .box .button .b1, .b2 {
+            font-family: 'Poppins', sans-serif; 
+            font-size: 12px;
+            margin: 2px auto;
+            padding: 4px 16px;
+        }
+        main .boxes .box .button .b1 a {
+            color: white;
+            text-decoration: none;
+        }
+        main .boxes .box .button .b2 a {
+            color: white;
+            text-decoration: none;
+        }
+        main .boxes .box .button .b1 {
+            border: 2px solid rgb(0, 174, 255);
+            background-color: rgb(0, 174, 255);
+            border-radius: 8px;
+        }
+        main .boxes .box .button .b2 {
+            border: 2px solid rgb(53, 187, 53);
+            background-color: rgb(53, 187, 53);
+            border-radius: 8px;
+        }
+        main .boxes .box .button .b1:hover {
+            background-color: rgb(6, 152, 219);
+        }
+        main .boxes .box .button .b2:hover {
+            background-color: rgb(43, 149, 43);
+        }
+        main .boxes .box-1 .head p {
+            font-weight: bolder;
+            font-size: 22px;
+            font-family: 'Poppins', sans-serif; 
+        }
+        main .boxes .box .head .h1 p:first-child {
+            font-weight: bolder;
+            font-size: 22px;
+            font-family: 'Poppins', sans-serif; 
+        }
+
+
+        footer .box1 {
+            padding: 80px 100px 0px 100px;
+            background-color: rgba(21, 19, 19, 0.94);
+            color: white;
+            display: flex;
+            flex-wrap: wrap;
+            /* width: 100vw; */
+            height: 900px;
+            gap: 2px;
+            justify-content: space-around;
+            font-family: 'Poppins', sans-serif;   
+        }
+        footer .box1 .h1 {
+            width: 470px;
+            /* border: 2px solid white; */
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        footer .box1 .h1 h2 {
+            padding: 28px 0px 10px 0px;
+        }
+        footer .box1 .h2 {
+            width: 360px;
+            height: 280px;
+            border-radius: 8px;
+            margin: 0px 40px 0px 0px;
+            border: 2px solid white;
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+        }
+        footer .box1 .h2 p {
+            color: rgb(30, 166, 239);
+            font-size: 24px;
+            margin: 18px 0px;
+        }
+        footer .box1 .h2 label {
+            color: black;
+            font-size: 12px;
+        }
+        footer .box1 .h2 input {
+            border-radius: 6px;
+            width: 260px;
+            height: 36px;
+            padding: 0px 4px;
+            margin: 0px 0px 10px 0px;
+        }
+        footer .box1 .h2 button {
+            border: none;
+            background-color: rgb(48, 189, 224);
+            color: white;
+            padding: 8px 108px;
+            height: 36px;
+            margin: 2px 0px; 
+            border-radius: 6px;
+        }
+        footer .box1 .h2 button:hover {
+            background-color: rgb(6, 152, 219);
+        }
+        footer .box1 .para {
+            /* border: 2px solid white; */
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            justify-content: space-around;
+            padding: 54px 10px;
+            width: 70vw;
+        }
+        footer .box1 .para p:nth-child(1), p:nth-child(4) {
+            font-size: 22px;
+        }
+        footer .box1 .para p a {
+            color: rgb(48, 189, 224);
+        }
+        footer .box2 ul {
+            list-style: none;
+        }
+        footer .box2 {
+            display: flex;
+            justify-content: center;
+            text-align:start;
+        }
+        footer .box2 .p1, .p2, .p3, .p4 {
+            /* border: 2px solid black; */
+            width: 300px;
+            font-family: 'Poppins', sans-serif; 
+            margin: 20px 6px;  
+            font-size: 12px;
+        }
+        footer .box2 .p1 ul, .p2 ul, .p3 ul {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+        footer .box2 .p1 ul li a, .p2 ul li a, .p3 ul li a {
+            text-decoration: none;
+            color: black;
+        }
+        footer .box2 .p1 ul li:first-child, .p2 ul li:first-child, .p3 ul li:first-child, .p4 p:first-child {
+            font-weight: bolder;
+            font-size: 14px !important; 
+            padding: 10px 0px;
+        }
+        footer .box2 .p4 {
+            padding: 0px 20px;
+            width: 220px;
+        } 
+        footer .box2 .p4 input {
+            margin: 6px 0px;
+            height: 34px;
+            width: 180px;
+            border-radius: 4px;
+            padding: 0px 6px;
+            border-color: rgb(103, 94, 94);
+        }
+        footer .box2 .p4 div button {
+            border: none;
+            background-color: rgb(48, 189, 224);
+            color: white;
+            padding: 4px 10px;
+            height: 35px;
+            width: 196px;
+            border-radius: 4px;
+            margin: 6px 0px;
+        }
+        footer .box2 .p4 div button:hover {
+            background-color: rgb(6, 152, 219);
+        }
+        footer .box3 {
+            display: flex;
+            align-items: center;
+            width: 80vw;
+            /* border: 2px solid black; */
+            margin: 10px auto;
+            gap: 48vw;
+        }
+        footer .box3 .copy {
+            /* border: 2px solid black; */
+            /* align-self: flex-start; */ 
+        /* wrong axes, so won't look good */
+
+            /* justify-self: flex-start; */
+        /* didn't work out */
+            font-family: 'Poppins', sans-serif; 
+            font-size: 12px;
+        }
+        footer .box3 .symbols {
+            /* border: 2px solid black; */
+            align-self: flex-start;
+            /* justify-self: flex-end; */
+
+            display: flex;
+            align-items: center;
+        }
+        footer .box3 .symbols a img {
+            margin: 0px 4px;
+            height: 24px;
+        }
+        footer .box3 .symbols a:nth-child(4) img {
+            border-radius: 60px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="box">
+                <a href="/"><img src="Dark-logo.png" alt="logo" height="80px"></a>
+            </div>
+            <div class="find">
+                <ul>
+                    <li><a href="/" target="_blank">Products</a></li>
+                    <li><a href="/" target="_blank">Pricing</a></li>
+                    <li><a href="/" target="_blank">Resources</a></li>
+                    <li><a href="/" target="_blank">About us</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="heading">
+            <div class="box1">
+                <p>Download <span>UltraEdit</span> for Windows</p>
+                <img src="rating.png" alt="rating" height="36px">
+            </div>
+            <div class="box2">
+                <p>Download and try UltraEdit before you buy it! This download includes the full Windows version of the text editor.</p>
+                <p><a href="/">DOWNLOAD MAC OR LINUX VERSION</a></p>
+            </div>
+        </div>
+        <div class="heading-2">
+            <div class="box1"><p>UE</p></div>
+            <div class="box2"><p>Download UltraEdit</p></div>
+            <div class="box3"><p>v2023.1(released 08/16/2023) | Hotfix</p></div>
+        </div>
+        <div class="boxes">
+            <div class="box box-1">
+                <div class="head"><p>English</p></div>
+                <div class="button">
+                    <div class="b1"><a href="/" target="_blank"><p>Download 32-bit</p></a></div>
+                    <div class="b2"><a href="/" target="_blank"><p>Download 64-bit</p></a></div>
+                </div>
+            </div>
+            <div class="box box-2">
+                <div class="head">
+                    <div class="h1"><p>Deutsch</p></div>
+                    <div class="h2"><p>German</p></div>
+                </div>
+                <div class="button">
+                    <div class="b1"><a href="/" target="_blank"><p>Download 32-bit</p></a></div>
+                    <div class="b2"><a href="/" target="_blank"><p>Download 64-bit</p></a></div>
+                </div>
+            </div>
+            <div class="box box-3">
+                <div class="head">
+                    <div class="h1"><p>Italiano</p></div>
+                    <div class="h2"><p>Italian</p></div>
+                </div>
+                <div class="button">
+                    <div class="b1"><a href="/" target="_blank"><p>Download 32-bit</p></a></div>
+                    <div class="b2"><a href="/" target="_blank"><p>Download 64-bit</p></a></div>
+                </div>
+            </div>
+            <div class="box box-4">
+                <div class="head">
+                    <div class="h1"><p>Español</p></div>
+                    <div class="h2"><p>Spanish</p></div>
+                </div>
+                <div class="button">
+                    <div class="b1"><a href="/" target="_blank"><p>Download 32-bit</p></a></div>
+                    <div class="b2"><a href="/" target="_blank"><p>Download 64-bit</p></a></div>
+                </div>
+            </div>
+            <div class="box box-5">
+                <div class="head">
+                    <div class="h1"><p>français</p></div>
+                    <div class="h2"><p>French</p></div>
+                </div>
+                <div class="button">
+                    <div class="b1"><a href="/" target="_blank"><p>Download 32-bit</p></a></div>
+                    <div class="b2"><a href="/" target="_blank"><p>Download 64-bit</p></a></div>
+                </div>
+            </div>
+            <div class="box box-6">
+                <div class="head">
+                    <div class="h1"><p>Português brasileiro</p></div>
+                    <div class="h2"><p>Brazilian Portuguese</p></div>
+                </div>
+                <div class="button">
+                    <div class="b1"><a href="/" target="_blank"><p>Download 32-bit</p></a></div>
+                    <div class="b2"><a href="/" target="_blank"><p>Download 64-bit</p></a></div>
+                </div>
+            </div>
+            <div class="box box-7">
+                <div class="head">
+                    <div class="h1"><p>日本</p></div>
+                    <div class="h2"><p>Japanese</p></div>
+                </div>
+                <div class="button">
+                    <div class="b1"><a href="/" target="_blank"><p>Download 32-bit</p></a></div>
+                    <div class="b2"><a href="/" target="_blank"><p>Download 64-bit</p></a></div>
+                </div>
+            </div>
+            <div class="box box-8">
+                <div class="head">
+                    <div class="h1"><p>한국어</p></div>
+                    <div class="h2"><p>Korean</p></div>
+                </div>
+                <div class="button">
+                    <div class="b1"><a href="/" target="_blank"><p>Download 32-bit</p></a></div>
+                    <div class="b2"><a href="/" target="_blank"><p>Download 64-bit</p></a></div>
+                </div>
+            </div>
+            <div class="box box-9">
+                <div class="head">
+                    <div class="h1"><p>中国</p></div>
+                    <div class="h2"><p>Chinese</p></div>
+                </div>
+                <div class="button">
+                    <div class="b1"><a href="/" target="_blank"><p>Download 32-bit</p></a></div>
+                    <div class="b2"><a href="/" target="_blank"><p>Download 64-bit</p></a></div>
+                </div>
+            </div>
+            <div class="box box-10">
+                <div class="head">
+                    <div class="h1"><p>中國</p></div>
+                    <div class="h2"><p>Traditional Chinese</p></div>
+                </div>
+                <div class="button">
+                    <div class="b1"><a href="/" target="_blank"><p>Download 32-bit</p></a></div>
+                    <div class="b2"><a href="/" target="_blank"><p>Download 64-bit</p></a></div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="box1">
+            <div class="h1">
+                <h2>Join the UltraEdit newsletter</h2>
+                <p>Sign up for our newsletter and receive emails for the latest news, blogs, and special deals on UltraEdit.</p>
+            </div>
+            <div class="h2">
+                <p>Subscribe to our emails</p>
+                <form action="forms.php">
+                    <label for="email">Enter email address</label>
+                    <br>
+                    <input type="text" id="email">
+                    <br>
+                    <button>SIGN UP</button>
+                </form>
+            </div>
+
+            <div class="para">
+                <p>EXE or MSI?</p>
+                <p>The EXE builds of our products are the preferred download for most of our users, running Windows 8.1 and later.</p>
+                <p>We make MSI builds available for bulk or silent deployments (command line, GPO, SCCM, etc.). <a href="/">Get the UltraEdit MSI installer</a>.</p>
+                <p>Free trial period</p>
+                <p>This application comes with a free, fully functional 30 day trial period. After the trial period expires, you must <a href="/">purchase a license</a> to continue using it.</p>
+            </div>
+        </div>
+        <div class="box2">
+            <div class="p1">
+                <ul>
+                    <li>What's your language?</li>
+                    <li><a href="/">Code editor (General)</a></li>
+                    <li><a href="/">Text editor</a></li>
+                    <li><a href="/">Hex</a></li>
+                    <li><a href="/">HTML</a></li>
+                    <li><a href="/">PHP</a></li>
+                    <li><a href="/">CSS</a></li>
+                    <li><a href="/">XML</a></li>
+                    <li><a href="/">Markdown</a></li>
+                    <li><a href="/">C++</a></li>
+                    <li><a href="/">SAS</a></li>
+                    <li><a href="/">Unix shell scripts</a></li>
+                    <li><a href="/">PL/SQL</a></li>
+                    <li><a href="/">Visual Basic</a></li>
+                </ul>
+            </div>
+            <div class="p2">
+                <ul>
+                    <li>What type of user are you?</li>
+                    <li><a href="/">Programmer / Developer</a></li>
+                    <li><a href="/">Web Developer</a></li>
+                    <li><a href="/">Database Manager</a></li>
+                    <li><a href="/">System Administrator</a></li>
+                    <li><a href="/">Technical Writer</a></li>
+                    <li><a href="/">Editor / Publisher</a></li>
+                    <li><a href="/">Medical / Pharmaceutical</a></li>
+                </ul>
+            </div>
+            <div class="p3">
+                <ul>
+                    <li>General</li>
+                    <li><a href="/">Contact</a></li>
+                    <li><a href="/">License Agreement (EULA)</a></li>
+                    <li><a href="/">End of Life Policy</a></li>
+                    <li><a href="/">Libraries and Patents</a></li>
+                    <li><a href="/">Information Policy</a></li>
+                    <li><a href="/">Privacy Policy</a></li>
+                    <li><a href="/">Uninstall Instructions</a></li>
+                    <li><a href="/">Sitemap</a></li>
+                    <li><a href="/">Legal</a></li>
+                </ul>
+            </div>
+            <div class="p4">
+                <p>Subscribe to Newsletter</p>
+                <p>Get the latest news on new releases, event, and developments.</p>
+                <form action="forms.php">
+                    <input type="text" id="emails" placeholder="Enter email address...">
+                    <div>
+                        <button>Subscribe</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="box3">
+            <div class="copy">
+                <a href="/"><img src="Dark-logo.png" alt="logo" height="50px"></a>
+                <div><p>&copy;2023 UltraEdit. All rights reserved</p></div>
+            </div>
+            <div class="symbols">
+                <a href="https://www.twitter.com" target="_blank"><img src="twitter-3.png" alt="twitter" height="20px"></a>
+                <a href="https://www.github.com" target="_blank"><img src="github-mark.png" alt="github" height="24px"></a>
+                <a href="https://www.youtube.com" target="_blank"><img src="yt-3.png" alt="youtube" height="24px"></a>
+                <a href="https://www.facebook.com" target="_blank"><img src="fb-4.png" alt="facebook" height="24px"></a>
+                <a href="https://www.instagram.com" target="_blank"><img src="insta-2.png" alt="instagram" height="24px"></a>
+                <a href="https://www.linkedin.com" target="_blank"><img src="linkedin-2.png" alt="linkedin" height="26px"></a>
+                <a href="https://www.reddit.com" target="_blank"><img src="reddit.png" alt="reddit" height="26px"></a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

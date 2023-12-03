@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Flexbox - 02</title>
+    <style>
+        .container{
+            border: 2px solid red;
+            height: 80vh;
+        
+            display: flex;
+            /* flex-flow: row wrap; */
+            align-content: flex-start;
+            gap: 40px 10px;
+        }
+        .item {
+            height: 42px;
+            width: 42px;
+            border: 2px solid black;
+            /* margin: 4px; */
+            background-color: blueviolet;
+
+    /* properties applied on the items */
+        /* ~> order :
+            the items lay orderwise, the one with lesser order value come first  */
+        
+        /* ~> flex-grow : 
+            this has default value 0 */
+            /* flex-grow: 1; */
+        /* by giving it value "1", we are saying that all the items will take equal places using the whole width of the container/flexbox */
+
+        /* ~> flex-shrink : 
+            ability of a flex item to shrink if "necessary" */
+        
+        /* ~> align-self : */
+        }
+        .order-1 {
+            order: 1;
+        }
+        .order-2 {
+            order: 2;
+        }
+        .order-3 {
+            order: 3;
+        }
+    /* default order value is zero(0), same as "order: 0;" so the items with no defined order value will have the default value 0(zero) */
+
+        .item-2 {
+            /* flex-grow: 2; */
+        /* now this item will take the place of 2 items by itself and with higher value it will grow more relative to other items and the items with the equal "flex-grow" value will still take the equal places (lesser from the previous case but will use the whole width of the flexbox) */
+
+        /* in absence of wrap */
+            /* flex-shrink: 2; */
+        /* i.e. this item will shrink with double speed and it will shrink if necessary (e.g. while shrinking the layout) . Default value is 1(i.e. all the items will shrink in same speed), the one item will higher "flex-shrink" value will shrink in higher speed relative to the default one */
+
+            align-self: flex-end;
+        /* this particular element will align itself as it's given along the cross-axis  */
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="container">
+            <div class="item order-2">1</div>
+            <div class="item item-2">2</div>
+            <div class="item">3</div>
+            <div class="item order-1">4</div>
+            <div class="item">5</div>
+            <div class="item">6</div>
+            <div class="item">7</div>
+            <div class="item">8</div>
+            <div class="item">9</div>
+            <div class="item">10</div>
+            <div class="item">11</div>
+        </div>
+    </main>
+</body>
+</html>

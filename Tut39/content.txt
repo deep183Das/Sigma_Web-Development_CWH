@@ -1,0 +1,30 @@
+CSS Grid
+    ~> This is one of the ways to create layouts using CSS (this is used to create such layouts which actually resemble to grid system)
+    ~> grids come handy as "float" and "positioning" are way more confusing
+
+    ~> grid-row and grid-column properties (using their numbers)    
+    ~> naming grid lines
+(grid-01) using "grid template rows and columns"
+
+    ~> grid template area
+(grid-02) using "grid template areas"
+
+    ~> "fr" unit : specifically used in grids
+    ~> "gap" property
+        -> don't use padding in flexbox and grid, use gap property
+(grid-03) uisng grid unit and gap property
+
+    ~> justify-items
+    ~> align-items
+    
+    ~> align-self
+    ~> justify-self
+
+    ~> repeat() syntax
+    ~> minmax() function
+(grid-04) 
+
+    ~> justify-content
+    ~> align-content
+        (these will be applied only when the container is bigger that the grid to contain the items)
+(grid-05)

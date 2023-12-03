@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid - 2</title>
+<!-- method 2 to place in grid(s) :
+    give names to the grid areas and then use names to place the items as shown in "image02" [grid template area]
+-->
+    <style>
+        .container {
+            border: 2px solid black;
+    
+            display: grid;
+            grid-template-areas: "nav nav nav"
+                                "side article article"
+                                "footer footer footer";
+        /* thus the total grid area is divided into 3 rows and 3 columns where the first 3 columns of the row 1 are named as "nav" and the 1st column of 2nd row is "side" and last two columns of 2nd row are named as "article" and the last row is named as "footer" */
+    /* first the items will be filled in the specified parts and then if there are more items then automatically required number of rows and columns will be added */
+        }
+        .item {
+            border: 2px solid red;
+            height: 55px;
+            /* width: 55px; */
+        }
+
+        .item-1 { 
+            grid-area: nav;
+        /* so item-1 will take whole of row-1 */
+            background-color: aqua;
+        }
+        .item-2 {
+            grid-area: side;
+            background-color: bisque;
+        }
+        .item-3 {
+            grid-area: article;
+            background-color: azure;
+        }
+        .item-4 {
+            grid-area: footer;
+            background-color: yellow;
+        }
+        .item-5 {
+        /* in order to overlap it with the nav */
+            grid-area: nav;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item item-1">1</div>
+        <div class="item item-2">2</div>
+        <div class="item item-3">3</div>
+        <div class="item item-4">4</div>
+        <div class="item item-5">5</div>
+    </div>
+</body>
+</html>
