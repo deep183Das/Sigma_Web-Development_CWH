@@ -1,0 +1,8 @@
+
+CSS Transition Property
+    -> From one state to another state with ease (appealing to eyes)
+
+    -> while applying the "transform: translate()" if we give 34% as argument, that signifies the 34% of the width of the element if translated in X and that of height if translated in Y
+
+    transition: <transition-property> | <transition-duration> | <transition-timing-function> | <transition-delay>
+     

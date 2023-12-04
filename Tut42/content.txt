@@ -1,3 +1,14 @@
-
-CSS Transforms
-    -> two 
+CSS Transforms -> two types
+    ~> 2D Transforms
+        This property allows the content to be restructured in ways like translate,
+        rotate, scale or skew etc. As it is 2D, therefore the content si Transformed
+        into x and y dimensions.
+    ~> 3D Transforms
+        We can manipulate the objects in 3D (in addition to z axis)
+    
+(due)* 
+    translate3d()
+    rotate3d()
+    perspective()
+    matrix()  (6 values)
+    matrix3d() (16 values)

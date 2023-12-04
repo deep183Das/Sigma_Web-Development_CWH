@@ -1,0 +1,129 @@
+/* using media queries and converting to vh-vw units --> making this page more responsive to computer and phone displays */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.head {
+    margin: 6.63vh auto;
+    width: 80vw;
+    display: grid;
+    grid-template-columns: 2fr 11.5fr 45fr;
+    align-items: center;
+}
+.head p:first-child {
+    border: 2px solid rgb(242, 242, 8);
+    background-color: rgb(242, 242, 8);
+    height: 6.63vh;
+    width: 6.63vh;
+    border-radius: 6px;
+    font-size: 34px;
+    font-weight: bolder;
+    font-style: italic;
+    text-align: center;
+}
+.head p:nth-child(2) {
+    /* border: 2px solid black; */
+    font-size: 26px;
+    align-self: start;
+    height: 38px;
+    padding: 6px 0px 0px 10px;
+}
+
+@media only screen and (min-width: 700px) 
+{
+    .boxes {
+        margin: 0px auto;
+        width: 80vw;
+        /* border: 2px solid black; */
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 8vh;
+    }    
+
+    .box p a button {
+        text-decoration: none;
+        font-weight: bolder;
+        border: none;
+        border-radius: 6px;
+        color: white;
+        width: 11.328vw;
+        height: 6vh;
+        padding: 4px;
+        cursor: pointer;
+    }
+}
+
+@media only screen and (max-width: 700px) 
+{
+    .boxes {
+        margin: 0px auto;
+        width: 80vw;
+        /* border: 2px solid black; */
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 8vh;
+    }    
+
+    .box p a button {
+        text-decoration: none;
+        font-weight: bolder;
+        border: none;
+        border-radius: 6px;
+        color: white;
+        width: 20vw;
+        height: 6vh;
+        padding: 4px;
+        cursor: pointer;
+    }
+}
+
+.box {
+    height: 22vh;
+    /* border: 2px solid black; */
+    background-color: rgba(247, 243, 243, 0.953);
+
+    display: grid;
+    gap: 0.53vh;
+    grid-template-areas: "lang lang"
+                         "eng-lang eng-lang"
+                         "download-1 download-2";
+    text-align: center;
+    border-radius: 8px;
+    padding: 2px;
+    margin: 4px;
+}
+.box p:nth-child(1) {
+    grid-area: lang;
+    align-self: end;
+    font-weight: bolder;
+    font-size: 20px;
+}
+.box p:nth-child(2) {
+    grid-area: eng-lang;
+    font-size: 12px;
+}
+.box p:nth-child(3) {
+    grid-area: download-1;
+}
+.box p:nth-child(4) {
+    grid-area: download-2;
+}
+.box p:nth-child(3) a button {
+    background-color: rgb(13, 152, 221);
+    margin: 0px 1px 0px 4px;
+}
+.box p:nth-child(3) a button:hover {
+    background-color: rgb(10, 124, 181);
+}
+.box p:nth-child(4) a button {
+    background-color: rgb(9, 174, 28);
+    margin: 0px 4px 0px 1px;
+}
+.box p:nth-child(4) a button:hover {
+    background-color: rgb(11, 132, 25);
+}

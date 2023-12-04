@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Animations</title>
+
+    <style>
+        .container {
+            background-color: rgb(9, 106, 106);
+            height: 80vh;
+            width: 30vw;
+        }
+
+        .box {
+            width: 34px;
+            height: 45px;
+    
+    /* now applying the animation in the box */
+
+        /* using specific properties instead of the short-hand */
+            animation-name: Deep_Animation_1;
+            animation-duration: 3s;
+            animation-timing-function: cubic-bezier(0, 0, 0, 0.96);
+            animation-delay: 2s;
+            animation-iteration-count: 1;
+            /* animation-direction: alternate; */
+        /* uisng "animation-play-state" we can pause and play our animation at any random place/position we want and it will pause or start running from that place only */
+            /* animation-play-state: paused; */
+        /* by default, "animation-fill-mode" has value "none" */
+            animation-fill-mode: backwards;
+        /* then it will at last retain its initial property */
+            animation-fill-mode: forwards;
+        /* then it will at last retain its final property */
+            animation-fill-mode: both;
+
+        /* using animation short-hand */
+            animation: Deep_Animation_1 3s ease-in 2s 1 alternate forwards;
+
+
+        /* we can create multiple animations, use comma separated values */
+        animation: Deep_Animation_1 2s ease-in-out 1s 4 alternate, 
+                   Deep_Animation_2 2s ease-in-out 1s 2;
+        }
+
+    /* for creating animations in CSS, "keyframes" are used */
+        @keyframes Deep_Animation_1 {
+            from {
+                background-color: red;
+            }
+            to {
+                background-color: yellow;
+                /* transform: translateX(1000px); */
+            }
+        }
+
+        @keyframes Deep_Animation_2 {
+            0% {
+                /* background-color: red; */
+                transform: rotate(100deg);
+            }
+            25% {
+                /* background-color: orangered; */
+                transform: rotate(150deg);
+            }
+            50% {
+                /* background-color: yellow; */
+                transform: rotate(220deg);
+            }
+            75% {
+                /* background-color: green; */
+                transform: rotate(300deg);
+            }
+            100% {
+                /* background-color: blue; */
+                transform: rotate(330deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            Box
+        </div>
+    </div>
+</body>
+</html>
+
+<!-- 
+    using animation property we can precisely defines which property to move where and we can add more features to it.
+
+    So for simple transitions, use "transition" properties and otherwise for complex manipulations use "animation" property
+ -->
+ 

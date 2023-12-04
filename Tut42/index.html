@@ -4,8 +4,101 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS Transforms</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 100vw;
+            height: 80vh;
+            border: 2px solid purple;
+        }
+        .box {
+            height: 50px;
+            width: 50px;
+            background-color: beige;
+            border: 2px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+    /* Transform property applies some transform manipulations on elements */
+
+    /* "Rotate" property */
+            /* transform: rotate(40deg); */
+    /* 
+    one of the units is "deg"
+        -> positive (clockwise)
+        -> negative (anti-clockwise)
+    another one is "turn" 
+        -> 360deg = 1 turn
+    */
+            /* transform: rotate(0.25turn); */
+            /* transform: rotate(0.5turn); */
+
+        /* in order to rotate along a specific axis */
+            /* transform: rotateZ(40deg);   */
+        /* x-y plane */
+            /* transform: rotateY(50deg);   */
+        /* z-x plane */
+            /* transform: rotateX(99deg);   */
+        /* y-z plane */
+        /* 90deg rotation along any axis other than z and it will be paper-thin & can't even be seen */
+            
+    /* "Scale" property */
+            /* transform: scale(1.2); */
+        /* now the box becomes 1.2 times of its original size */
+            /* transform: scaleX(2); */
+            /* transform: scaleY(0.5); */
+    
+    /* "Skew" property */
+            /* transform: skew(5deg); */
+            /* transform: skewX(5deg); */
+            /* transform: skewY(5deg); */
+        /* not applicable for z axis */
+
+    /* "Translate" property */
+            /* transform: translate(34px); */
+            /* transform: translate(100%); */
+        /* transform: translateX();
+                      translateY();
+                      translateZ(); */
+            
+
+    /* using multiple properties all at once using spaces */
+            /* transform: translateY(34px) skewX(34deg) rotate(-34deg); */
+
+    /* 
+        Generally while making a navbar, we use transform properties and in several other cases also
+    */
+            /* transform: translateY(-100%); */
+        /* to hide the navbar or something */
+
+    /* "Transform Origin" property */
+            transform: rotate(0.125turn);
+        /* genrally the origin is the central point of the shape, but we can also define using transform-origin */
+            transform-origin: 0% 0%;
+        /* 
+            -> (0%,0%) means top-left corner
+            -> vertically downward direction is +Y axis
+            -> (100%, 100%) means bottom-right corner
+        */
+        }
+    </style>
 </head>
 <body>
-    
+    <div class="container">
+        <div class="box">
+                box
+        </div>
+    </div>
 </body>
 </html>
+<!-- (due)*
+    transform: rotate3d();
+    transform: scale3d();
+    transform: scaleZ();
+    transform: translate3d();
+ -->

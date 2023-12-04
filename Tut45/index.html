@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Transition Property</title>
+
+    <style>
+        .container {
+            background-color: antiquewhite;
+            width: 50vw;
+            height: 40vh;
+        }
+
+        .box {
+            background-color: aquamarine;
+            width: 5vw;
+            height: 4vh;
+        
+        /* "transition" property is used with 4 different functions and we apply transition property to specific "transform" properties */
+            transition-property: transform;
+        /* on which property we want to apply the transition property */
+            /* transition-property: all; */
+        /* by doing this, all properties will come under transition */
+            transition-property: background-color, transform;
+        /* comma separated values for bringing multiple propeties */
+            transition-duration: 3s;
+        /* for which duration, we want the transition */
+            transition-timing-function: ease-in-out;
+        /* Describes how the intermediate values (used during a transition) will be calculated */
+        /* use the "dev-kit" of browser and make your own and required transition timing functions */
+            transition-delay: 1s;
+        /* after applying/removing this class, this much time will be taken before the transition occurs */
+
+    /* using short-hand (combining all the 4 properties together) */
+            transition: all 3s cubic-bezier(0.34, 0.48, 0, 0.95) 1s;
+        }
+
+        .translate {
+            transform: translateX(10vw) translateY(10vh) scale(2);
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box translate">
+
+        </div>
+    </div>
+</body>
+</html>
+
+<!-- btw, this kind of smooth transition is done using JS. But here we are doing that using pure CSS -->

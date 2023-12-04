@@ -1,0 +1,6 @@
+
+CSS Animations
+    -> "keyframes" are used
+    -> animation: name duration timing-function delay iteration-count direction fill-mode;
+       (short hand)
+    
