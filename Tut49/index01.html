@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Object Fit and Position</title>
+
+    <style>
+        .container {
+            height: 634px;
+            width: 688px;
+            border: 2px solid black;
+            background-color: azure;
+        }
+
+        .contain {  
+        /* this container is not meant to be the parent of the image , it's just given to understand the boundary of the image's container */
+            height: 466px;
+            width: 488px;
+            border: 2px solid red;
+        }
+
+        img {
+            height: 466px;
+            width: 488px;
+        /* if we give height and width like this, then we might be missing its aspect ratio which would lead a damage in the looking of the image. So instead of finding its aspect ratio use the CSS property to fit this object */
+            /* object-fit: cover; */
+        /* with this property, the image will cover the box formed by its height(466px) and width's(488px) given values (maintaining its aspect ratio) not of the whole container . Apllying "cover" property lead to cutting the original image's portion to cover the given container */
+            
+            /* object-fit: contain; */
+        /* to show the whole image but if there a portion of the given height - width properties is not covered, no problem with that */
+            
+        /* we can also specify which portion to cut and which portion to keep while applying "cover" property */
+            /* object-fit: cover; */
+            /* object-position: top right; */
+        /* thus the whole of "top right" portions will be shown and other portions will be adjusted as per covering the container */
+            /* object-position: bottom right; */
+            /* object-position: top left; */
+
+        /* "object-fit" has default value "fill" which just fills the image in the given container with the given height and width and thus the image can get distorted because the aspect ratio is not maintained */
+            /* object-fit: fill; */
+
+        /* to reset the value give "none", then no height and width will be applied and the image will get back to its initail state with its own height and width values */
+            /* object-fit: none; */
+
+        /* in order to reduce the image's size if required, then use the following property and then the image will take the central position of the given container (not of its parent ".conatiner") */
+            /* object-fit: scale-down; */
+
+        /* in "object-position" property, we can also specify how much interval we want to see the image */
+            object-fit: cover;
+            object-position: 10px 20px;
+        /* 10px gap from left and 20px gap from top will be applied keeping the image covered in its container */
+
+            object-fit: contain;
+            object-position: 10px 20px;
+        /* gap of the given values from left and from the top is fixed and the picture will be adjusted in such a way */
+    /* in this method we can place the image anywhere we want in its container */
+
+        /* showing the central portion */
+            object-fit: cover;
+            object-position: 50% 50%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <div class="contain">
+            <img src="image01.jpg" alt="image">
+        </div>
+
+    </div>
+</body>
+</html>

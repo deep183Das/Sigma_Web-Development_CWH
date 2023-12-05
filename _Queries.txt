@@ -36,6 +36,11 @@ Q.3> What will be the specificity value of the following selector:
     So, the specificity value of the selector "a.harryclass.rohan-class[href]:hover" will be 41.
 
 
+Q.4> What are "-webkit-..." properties and why are they used ?
+
+
+
+
 !! Suggestions :
 
 S.1> "right click -> view page source" to watch the web page's sourse code.

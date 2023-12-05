@@ -1,0 +1,14 @@
+
+CSS Filters
+    ~> Blur filter
+    ~> Brightness filter
+    ~> Contrast filter
+    ~> Grayscale filter
+    ~> Sepia filter
+    ~> hue-rotate filter
+    ~> drop-shadow(horizontal offset vertical offset blur color)
+    ~> invert filter
+        (0 to 1)
+        filter: invert(1) --> all the colors will be inverted (negative image)
+    ~> opacity filter
+        (0(completely transparent) to 1(clearly visible and 0% transparency))

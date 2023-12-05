@@ -1,0 +1,8 @@
+
+CSS Object-fit and Object-cover
+    ~> for example, sometimes we have to place an image in a container such that 
+       in its given height and width, it fits completely maintaining its aspect ratio.
+       In such cases, this css property is used
+       
+    ~> background property
+    

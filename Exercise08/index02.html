@@ -1,5 +1,5 @@
 <!-- 
-    Bounce Animation (solution by me:)
+    Solution by Harry Bhai
  -->
 <!DOCTYPE html>
 <html lang="en">
@@ -15,6 +15,7 @@
             width: 80vw;
             background-color: blue;
         }
+
         .box {
             height: 121px;
             width: 121px;
@@ -24,42 +25,27 @@
             left: 0;
             border-radius: 70px;
 
-            animation: motion_in_Y 1s ease-out infinite alternate,
-                       motion_in_X 5s linear infinite alternate;
+            /* animation: animateX 3s linear infinite alternate; */
+            /* animation: animateY 1s ease-out infinite alternate; */
+                /* "ease-out" -> latter becomes slow */
+
+        /* now combining both the animations */
+            animation: animateX 3s linear infinite alternate,
+                       animateY 1s ease-out infinite alternate;
         }
 
-        @keyframes motion_in_X {
+        @keyframes animateX {
             from {
-                
+                left: 0;
             }
             to {
-                transform: translateX(calc(80vw - 121px));
+                left: calc(80vw - 121px);
             }
         }
-        @keyframes motion_in_Y {
-            /* 0% {
-                transform: translateY(0);
-            }
-            17.5% {
-                transform: translateY(-40vh);
-            }
-            33% {
-                transform: translateY(0);
-            }
-            50% {
-                transform: translateY(-40vh);
-            }
-            66% {
-                transform: translateY(0);
-            }
-            83% {
-                transform: translateY(-40vh);
-            }
-            100% {
-                transform: translateY(0);
-            } */
-            from {
 
+        @keyframes animateY {
+            from {
+                bottom: 0;
             }
             to {
                 bottom: calc(80vh - 121px);

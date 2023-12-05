@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Filters</title>
+
+    <style>
+        .img1 {
+            /* filter: blur(6px); */
+
+            filter: brightness(222%);
+
+            filter: drop-shadow(16px 16px 20px blue);
+        }
+
+        .img2 {
+    /* we can use multiple properites at once */
+            /* filter: brightness(22%) contrast(0.5); */
+            filter: brightness(122%) contrast(105%);
+
+            /* filter: invert(1); */
+            /* filter: opacity(50%); */
+            filter: opacity(0.1);
+        }
+        
+        .img3 {
+            /* filter: grayscale(70%); */
+        /* 100% means -> complete black and white */
+
+            /* filter: sepia(100%); */
+
+            filter: hue-rotate(60deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img class="img1" src="image01.jpg" alt="software">
+        <img class="img2" src="image02.jpg" alt="Vicky">
+        <img class="img3" src="image03.jpg" alt="ritesh">
+    </div>
+</body>
+</html>
