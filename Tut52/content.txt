@@ -1,0 +1,5 @@
+
+Figma (designing)   which is different from developing (writing code for the design)
+
+Previously, photoshop to html code (PSD to HTML)
+Now, for UI/UX designing FIGMA (for creating products)

@@ -1,0 +1,29 @@
+
+Introduction to JavaScript & Installing Node.js
+    ~> JS is a client-side scripting language and is used to make our webpage dynamic (frontend component)
+
+    ~> JS can also be used to make backends using Node.js 
+
+    ~>  (in terminal)
+        node --version
+            v20.10.0
+    
+    NPM is also by default installed. It is "Node Package Manager" which helps us instaling packages in our NODE.js and even we can 
+    use other's code in our NODE program
+        (in terminal)
+        npm 
+        npm --version
+            10.2.3
+
+    ~>  NODE.js is basically JS V8 engine which chrome uses to our scripts
+        Ryan Dahl put it into a C++ program and then onwards we can use the power of JS inside our computer system
+        So now we can run our JS programs using NODE similarly as we did with our python program using PyCharm
+    
+    But some things written in our scripts (e.g. prompt, confirm, alert) won't be run in NODE as they are only available in chrome
+        (in terminal being within this specific folder which contains the following JS files)
+        node .\script.js (or just "node script.js")     --> will throw an error showing "alert is not defined"
+
+        node .\new.js                                   --> no error and all the console.log messages will be printed
+
+    ~> in browser we get some extra "prompt" like acrtivities which we don't get while our JS script using NODE
+       on the other side, using NODE we can carry out file reading and writing which can not be done using browser
