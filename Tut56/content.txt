@@ -1,0 +1,4 @@
+
+JavaScript Conditionals: if, else if, else ladder 
+
+    -> repl(read-evaluate-print-look) of NODE.js is just the interface we get after writing the command "node" in the terminal and then we are inside its interface 

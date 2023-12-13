@@ -1,4 +1,4 @@
-!! Questions :
+!! Questions :  (* marked implying unresolved issues)
 
 Q.1> My browser may not support each and every type of file. Then how to resolve that issue while creating a generic web page for everyone.
     -> One solution is to convert those file formats into more popular and standard file formats before using in your webpage.
@@ -36,9 +36,9 @@ Q.3> What will be the specificity value of the following selector:
     So, the specificity value of the selector "a.harryclass.rohan-class[href]:hover" will be 41.
 
 
-Q.4> What are "-webkit-..." properties and why are they used ?
-
-
+*Q.4> What are "-webkit-..." properties and why are they used ?
+*Q.5> "for each" loop in JS ?
+*Q.6> Know when we shouldn't use "eval" in JS while working on a serios website
 
 
 !! Suggestions :
@@ -54,3 +54,5 @@ S.5> "windows + h" -> audio text writing
 S.6> "windows + d" -> to close and open all the tabs together
 S.7> "windows + tab" -> to get the view of all the opened app  
 S.8> "alt + tab" -> to open the last opened tab 
+
+S.9> Now-a-days JS is tremendously used to create S-A-A-S products which stands for "Software As A Service"

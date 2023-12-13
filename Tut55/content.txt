@@ -1,1 +1,4 @@
 
+JavaScript Variables, Data Types & Objects
+
+There is JS linters in VS which updates us with anything important about our file, what we are doing wrong and all..., This process is called "linting"
