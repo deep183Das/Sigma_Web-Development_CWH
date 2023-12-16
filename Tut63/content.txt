@@ -1,2 +1,4 @@
 
 JavaScript Arrays
+    -> Whenever we want to keep an entity at a particular name, we use Arrays
+    -> In JS, array is collection of multiple data types
